@@ -1,7 +1,7 @@
 defaults:
-	- socope:
-	  	path: ""
-	  values:
-	  	name: kamikaze/Dominic Fandrey
-	  	markdown: kramdown
-	  	layout: default
+  - socope:
+      path: ""
+    values:
+      name: kamikaze/Dominic Fandrey
+      markdown: kramdown
+      layout: default
