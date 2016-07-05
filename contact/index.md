@@ -1,3 +1,4 @@
 ---
 ---
-(Dominic Fandrey <kamikaze@bsdforen.de>)[mailto:kamikaze@bsdforen.de]
+- Dominic Fandrey
+- email: kamikaze@bsdforen.de
