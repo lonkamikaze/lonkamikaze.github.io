@@ -6,7 +6,38 @@
 		<title>{{ page.title }}</title>
 	</head>
 	<body>
-		<h1>{{ page.title }}</h1>
-		{{ content }}
+		<div id="header">
+			<a href="/">
+				<img src=/img/logo.svg" alt="Logo" />
+				{{ name }}
+			</a>
+			<a href="/journal">
+				<img src="/img/feather.svg" alt="icon" />
+				journal
+			</a>
+			<a href="/about">
+				<img src="/img/questionmark.svg" alt="icon" />
+				about
+			</a>
+			<a href="https://github.com/lonkamikaze">
+				<img src="/img/code.svg" alt="icon" />
+				code
+			</a>
+			<a href="/contact">
+				<img src="/img/contact.svg" alt="icon" />
+				contact
+			</a>
+		</div>
+		<div id="left"></div>
+		<div id="right"></div>
+		<div id="main">
+			<div id="content">
+				<h1>{{ page.title }}</h1>
+				{{ content }}
+			</div>
+			<div id="footer">
+				©kamikaze 2016
+			</div>
+		</div>
 	</body>
 </html>

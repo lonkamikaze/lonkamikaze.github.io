@@ -1,7 +1,84 @@
 body {
-	background: #808080;
+	background:          #dfdfdf;
+	margin:              0pt;
+	padding:             0pt;
 }
 
-body > *{
-	background: #ffffff;
+#header {
+	position:            fixed;
+	width:               100%;
+	height:              60pt;
+	margin:              0pt;
+	padding:             0pt;
+	background:          #ffffff;
+	line-height:         60pt;
+	font-family:         sans-serif;
+	font-size:           16pt;
+	font-variant:        small-caps;
+	box-shadow:          0pt 0pt 2pt;
+	text-align:          right;
 }
+
+#header a img {
+	height:              40pt;
+	display:             inline;
+	vertical-align:      middle;
+	opacity:             .666;
+}
+
+#header a {
+	text-decoration:     none;
+	color:               #808080;
+	padding:             0pt 25pt 0pt 0pt;
+}
+
+#header a:hover {
+	color:               #404040;
+}
+
+#header a:hover img {
+	opacity:             1;
+}
+
+#header a:first-child {
+	padding-left:        200pt;
+	float:               left;
+	font-size:           22pt;
+}
+
+#header a:first-child img {
+	height:              60pt;
+	opacity:             1;
+}
+
+#header a:last-child {
+	padding-right:       225pt;
+}
+
+#left {
+	padding:             60pt 25pt;
+	float:               left;
+	width:               150pt;
+}
+
+#right {
+	padding:             60pt 25pt;
+	float:               right;
+	width:               100pt;
+}
+
+#main {
+	background:          #ffffff;
+	padding:             60pt 25pt 0pt 25;
+	font-family:         serif;
+	margin:              0pt 200pt;
+}
+
+#content {
+}
+
+#footer {
+	height:              40pt;
+	line-height:         40pt;
+}
+
