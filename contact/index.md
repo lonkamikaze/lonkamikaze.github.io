@@ -1,4 +1,9 @@
 ---
+title: Contact
 ---
-- Dominic Fandrey
-- email: kamikaze@bsdforen.de
+Dominic Fandrey
+===============
+
+email: kamikaze@bsdforen.de
+---------------------------
+
