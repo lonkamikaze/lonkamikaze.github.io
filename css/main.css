@@ -113,7 +113,6 @@ body {
 
 #content pre + p {
 	text-align:          center;
-	position:            relative;
 	margin-top:          -15pt;
 	font-size:           80%;
 }

@@ -189,6 +189,8 @@ function empty(array, i) {
 }
 ~~~
 
+Workaround for mawk.
+
 Finally, MAWK uses exponential output for large numbers, even those
 cast to `int` (AWK interpreters store all numbers in double precision
 floating point format). In order to make sure that output is always
