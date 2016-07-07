@@ -1,26 +1,26 @@
 body {
-	background:          #dfdfdf;
+	background:          #f0f0f0;
 	margin:              0pt;
 	padding:             0pt;
+	font-size:           10pt;
 }
 
 #header {
 	position:            fixed;
 	width:               100%;
-	height:              60pt;
-	margin:              0pt;
-	padding:             0pt;
+	height:              40pt;
+	top:                 0pt;
 	background:          #ffffff;
-	line-height:         60pt;
+	line-height:         40pt;
 	font-family:         sans-serif;
-	font-size:           16pt;
 	font-variant:        small-caps;
 	box-shadow:          0pt 0pt 2pt;
 	text-align:          right;
 }
 
 #header a img {
-	height:              40pt;
+	width:               24pt;
+	height:              24pt;
 	display:             inline;
 	vertical-align:      middle;
 	opacity:             .666;
@@ -29,7 +29,7 @@ body {
 #header a {
 	text-decoration:     none;
 	color:               #808080;
-	padding:             0pt 25pt 0pt 0pt;
+	padding:             0pt 15pt 0pt 0pt;
 }
 
 #header a:hover {
@@ -41,44 +41,88 @@ body {
 }
 
 #header a:first-child {
-	padding-left:        200pt;
+	padding-left:        166pt;
 	float:               left;
-	font-size:           22pt;
+	font-size:           160%;
 }
 
 #header a:first-child img {
-	height:              60pt;
+	width:               40pt;
+	height:              40pt;
 	opacity:             1;
 }
 
 #header a:last-child {
-	padding-right:       225pt;
+	padding-right:       166pt;
 }
 
 #left {
-	padding:             60pt 25pt;
+	padding:             40pt 15pt;
 	float:               left;
-	width:               150pt;
+	width:               120pt;
 }
 
 #right {
-	padding:             60pt 25pt;
+	padding:             40pt 15pt;
 	float:               right;
-	width:               100pt;
+	width:               120pt;
 }
 
 #main {
 	background:          #ffffff;
-	padding:             60pt 25pt 0pt 25;
+	padding:             0pt 15pt;
 	font-family:         serif;
-	margin:              0pt 200pt;
+	margin:              40pt 150pt 0pt 150pt;
+	border-left:         1pt solid #c0c0c0;
+	border-right:        1pt solid #c0c0c0;
+	min-height:          calc(100vh - 40pt);
 }
 
-#content {
+#content h1, #content h2, #content h3, #content h4 {
+}
+
+#content h1 {
+	counter-reset:       illustration section;
+}
+
+#content h2 {
+	counter-reset:       subsection;
+}
+
+#content h2:before {
+	counter-increment:   section;
+	content:             counter(section) ". ";
+}
+
+#content h3:before {
+	counter-increment:   subsection;
+	content:             counter(section) "." counter(subsection) ". ";
+}
+
+#content pre {
+	border-radius:       5pt;
+	border:              1pt solid #c0c0c0;
+	background:          #f0f0f0;
+	margin:              15pt;
+	padding:             15pt;
+}
+
+#content pre + p {
+	text-align:          center;
+	position:            relative;
+	margin-top:          -15pt;
+	font-size:           80%;
+}
+
+#content pre + p::before {
+	counter-increment:   illustration;
+	content:             "Illustration " counter(illustration) ": ";
 }
 
 #footer {
 	height:              40pt;
 	line-height:         40pt;
+	font-size:           80%;
+	border-top:          solid 1pt #c0c0c0;
 }
 
