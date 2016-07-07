@@ -18,7 +18,7 @@ body {
 	text-align:          right;
 }
 
-#header a img {
+#header a img, #footer a img {
 	width:               24pt;
 	height:              24pt;
 	display:             inline;
@@ -26,17 +26,17 @@ body {
 	opacity:             .666;
 }
 
-#header a {
+#header a, #footer a {
 	text-decoration:     none;
 	color:               #808080;
 	padding:             0pt 15pt 0pt 0pt;
 }
 
-#header a:hover {
+#header a:hover, #footer a:hover {
 	color:               #404040;
 }
 
-#header a:hover img {
+#header a:hover img, #footer a:hover img {
 	opacity:             1;
 }
 
@@ -158,5 +158,15 @@ body {
 	line-height:         40pt;
 	font-size:           80%;
 	border-top:          solid 1pt #c0c0c0;
+}
+
+#footer a {
+	padding:             0pt;
+	float:               right;
+}
+
+#footer a img {
+	width:               20pt;
+	height:              20pt;
 }
 
