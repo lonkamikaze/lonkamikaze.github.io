@@ -103,7 +103,7 @@ body {
 	content:             counter(section) "." counter(subsection) ". ";
 }
 
-#content pre {
+#content pre, .details {
 	border-radius:       5pt;
 	border:              1pt solid #c0c0c0;
 	background:          #f0f0f0;
@@ -121,6 +121,36 @@ body {
 #content pre + p::before {
 	counter-increment:   illustration;
 	content:             "Illustration " counter(illustration) ": ";
+}
+
+#content dt {
+	font-weight:         bold;
+}
+
+#content a, a:visited {
+	color:               #e04000;
+	text-decoration:     none;
+}
+
+#content a:hover {
+	text-decoration:     overline underline;
+}
+
+.thumb {
+	width:               100pt;
+	height:              100pt;
+}
+
+.left {
+	float:               left;
+}
+
+.right {
+	float:               right;
+}
+
+.details h4 {
+	border-bottom:       1pt solid #c0c0c0;
 }
 
 #footer {
