@@ -72,10 +72,14 @@ body {
 	background:          #ffffff;
 	padding:             0pt 15pt;
 	font-family:         serif;
-	margin:              55pt 150pt 0pt 150pt;
+	margin:              40pt 150pt 0pt 150pt;
 	border-left:         1pt solid #c0c0c0;
 	border-right:        1pt solid #c0c0c0;
-	min-height:          calc(100vh - 55pt);
+	min-height:          calc(100vh - 40pt);
+}
+
+#content {
+	padding:             15pt 0pt 0pt 0pt;
 }
 
 #content h1, #content h2, #content h3, #content h4 {
