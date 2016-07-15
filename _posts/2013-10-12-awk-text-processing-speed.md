@@ -1,5 +1,10 @@
 ---
 title: AWK Text Processing Speed
+journal: 1
+tags:
+- awk
+- FreeBSD
+- GNU
 ---
 
 My default brand of AWK is the One-True-AWK also known as NAWK,
