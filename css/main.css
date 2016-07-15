@@ -8,28 +8,45 @@ body {
 #header {
 	position:            fixed;
 	width:               100%;
-	height:              40pt;
 	top:                 0pt;
 	background:          #ffffff;
-	line-height:         40pt;
+	padding:             0pt 101pt;
 	font-family:         sans-serif;
 	font-variant:        small-caps;
+	font-size:           140%;
+	line-height:         40pt;
 	box-shadow:          0pt 0pt 2pt;
+	list-style-type:     none;
+	margin:              0pt;
 	text-align:          right;
 }
+
+#header li {
+	display:             inline-block;
+}
+
+#header li:first-child {
+	float:               left;
+}
+
 
 #header a img, #footer a img {
 	width:               24pt;
 	height:              24pt;
-	display:             inline;
+	display:             inline-block;
 	vertical-align:      middle;
 	opacity:             .666;
+	margin:              0pt;
+	padding:             0pt;
+	border:              0pt none;
 }
 
 #header a, #footer a {
 	text-decoration:     none;
 	color:               #808080;
 	padding:             0pt 15pt 0pt 0pt;
+	white-space:         nowrap;
+	display:             block;
 }
 
 #header a:hover, #footer a:hover {
@@ -40,20 +57,15 @@ body {
 	opacity:             1;
 }
 
-#header a:first-child {
-	padding-left:        166pt;
-	float:               left;
-	font-size:           160%;
+#header li:first-child a {
+	padding-left:        15pt;
 }
 
-#header a:first-child img {
+#header li:first-child a img {
 	width:               40pt;
 	height:              40pt;
+	vertical-align:      bottom;
 	opacity:             1;
-}
-
-#header a:last-child {
-	padding-right:       166pt;
 }
 
 #left {
