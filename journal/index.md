@@ -2,7 +2,7 @@
 title: Journal
 ---
 {% for post in site.posts %}
-{% unless post.draft or post.news %}
+{% if post.journal %}
 <h4>
 	<div class="date">{{ post.date | date: site.style.date }}</div>
 	<a href="{{ post.id }}">{{ post.title }}</a>
@@ -11,5 +11,5 @@ title: Journal
 <div class="update">{{ post.update  | date: "%F" }}</div>
 {{ post.excerpt }}
 <a href="{{ post.id }}" class="read-more">Read More …</a>
-{% endunless %}
+{% endif %}
 {% endfor %}
