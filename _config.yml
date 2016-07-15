@@ -1,9 +1,16 @@
-title: kami's braindump
-copy: 2016 Dominic Fandrey
+title: Kami's Braindump
+copy: 2013 - 2016 Dominic Fandrey
+style:
+  date: "%F"
 defaults:
-  - socope:
-      path: ""
-    values:
-      name: kamikaze/Dominic Fandrey
-      markdown: kramdown
-      layout: default
+- socope:
+    path: ""
+  values:
+    name: "kamikaze/Dominic Fandrey"
+    markdown: kramdown
+    layout: default
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    author: "kami"
