@@ -1,8 +1,13 @@
 body {
-	background:          #f0f0f0;
 	margin:              0pt;
 	padding:             0pt;
 	font-size:           10pt;
+	tab-size:            4;
+	-moz-tab-size:       4; /**< CSS3 support, anybody? */
+}
+
+* {
+	box-sizing:          border-box;
 }
 
 #header {
@@ -69,36 +74,29 @@ body {
 }
 
 #left {
-	padding:             40pt 15pt;
+	padding:             40pt 15pt 0pt 15pt;
 	float:               left;
-	width:               120pt;
+	width:               100pt;
 }
 
 #right {
-	padding:             40pt 15pt;
+	padding:             40pt 15pt 0pt 15pt;
 	float:               right;
-	width:               120pt;
+	width:               100pt;
 }
 
 #main {
-	background:          #ffffff;
-	padding:             0pt 15pt;
 	font-family:         serif;
-	margin:              40pt 150pt 0pt 150pt;
-	border-left:         1pt solid #c0c0c0;
-	border-right:        1pt solid #c0c0c0;
-	min-height:          calc(100vh - 40pt);
 }
 
 #content {
-	padding:             1pt 0pt;
 }
 
 #content h1, #content h2, #content h3, #content h4 {
 }
 
 #content h1 {
-	counter-reset:       illustration section;
+	counter-reset:       illustration section table;
 }
 
 #content h2 {
@@ -118,19 +116,23 @@ body {
 #content pre, .details {
 	border-radius:       5pt;
 	border:              1pt solid #c0c0c0;
-	background:          #f0f0f0;
 	margin:              15pt;
 	padding:             15pt;
+	counter-increment:   illustration;
 }
 
-#content pre + p {
+#content pre {
+	white-space:         pre-wrap;
+	word-break:          break-all;
+}
+
+#content pre + p, .highlighter-rouge + p, #content table + p {
 	text-align:          center;
 	margin-top:          -15pt;
 	font-size:           80%;
 }
 
-#content pre + p::before {
-	counter-increment:   illustration;
+#content pre + p::before, .highlighter-rouge + p::before {
 	content:             "Illustration " counter(illustration) ": ";
 }
 
@@ -139,12 +141,27 @@ body {
 }
 
 #content a, a:visited {
-	color:               #e04000;
+	color:               #600000;
 	text-decoration:     none;
 }
 
 #content a:hover {
-	text-decoration:     overline underline;
+	color:               #e04000;
+}
+
+#content table {
+	border-radius:       5pt;
+	border:              1pt solid #c0c0c0;
+	margin:              15pt auto;
+	counter-increment:   table;
+}
+
+#content td {
+	margin:              1pt;
+}
+
+#content table + p::before {
+	content:             "Table " counter(table) ": ";
 }
 
 .thumb {
@@ -164,6 +181,95 @@ body {
 	border-bottom:       1pt solid #c0c0c0;
 }
 
+/* optional meta { */
+
+.date:empty, .update:empty, .author:empty {
+	display:             none;
+}
+
+.date {
+	font-size:           80%;
+	border-radius:       0pt 2.5pt 0pt 2.5pt;
+	border:              1pt solid #c0c0c0;
+	background:          #f8f8f8;
+	padding:             0pt 5pt;
+	display:             inline-block;
+}
+
+.update, .author {
+	font-size:           80%;
+	font-style:          italic;
+}
+
+.update {
+	margin-top:          -10pt;
+}
+
+.author {
+	margin-top:          10pt;
+	text-align:          right;
+}
+
+.update:before {
+	content:             "Latest update: "
+}
+
+.author:before{
+	content:             "Written by: "
+}
+
+.tag {
+	font-size:           80%;
+	border:              1pt solid #a0c0a0;
+	border-radius:       2.5pt;
+	font-variant:        small-caps;
+}
+
+/* } optional meta */
+
+.note {
+	border-radius:       5pt;
+	border:              1pt solid #c0c0c0;
+	margin:              15pt;
+	padding:             5pt;
+}
+
+.note h4 {
+	border-radius:       5pt 0pt 2.5pt 0pt;
+	border:              1pt solid #c0c0c0;
+	margin:              -6pt 0pt 0pt -6pt;
+	width:               150pt;
+	padding:             0pt 5pt;
+	font-variant:        small-caps;
+}
+
+.warn h4 {
+}
+
+.good {
+	color:               #008000;
+}
+
+.bad {
+	color:               #800000;
+}
+
+/* syntax hilghighting { */
+
+.highlight .c  { color:      #800000; }
+.highlight .o  { color:      #808000; }
+.highlight .p  { color:      #808000; }
+.highlight .k  { color:      #808000; }
+.highlight .s1 { color:      #008000; }
+.highlight .s2 { color:      #008000; }
+.highlight .nv { color:      #000080; }
+.highlight .nb { color:      #ff8000; }
+.highlight .gd { color:      #800000; }
+.highlight .gi { color:      #008000; }
+.highlight .gu { color:      #000080; }
+
+/* } syntax highlighting */
+
 #footer {
 	height:              40pt;
 	line-height:         40pt;
@@ -180,4 +286,114 @@ body {
 	width:               20pt;
 	height:              20pt;
 }
+
+@media print {
+
+#header, #left, #right, #footer {
+	display:             none;
+}
+
+#main {
+	margin:              50pt;
+}
+
+#content td {
+	border:              1pt solid #c0c0c0;
+}
+
+.note h4 {
+	border-top:          none;
+	border-left:         none;
+	margin:              -5pt 0pt 0pt -5pt;
+}
+
+} /* @media print */
+
+@media screen {
+
+body {
+	background:          #404040;
+	overflow-y:          scroll;
+}
+
+#main {
+	background:          #ffffff;
+	padding:             1pt 15pt;
+	margin:              40pt 100pt 0pt 100pt;
+	border-left:         1pt solid #c0c0c0;
+	border-right:        1pt solid #c0c0c0;
+	min-height:          calc(100vh - 40pt);
+}
+
+#content pre, .details {
+	background:          #f0f0f0;
+}
+
+#content table {
+	background:          #f0f0f0;
+}
+
+#content td {
+	background:          #fcfcfc;
+}
+
+.date {
+	margin:              0pt 0pt 0pt -20pt;
+}
+
+.tag {
+	background:          #a0f0a0;
+}
+
+.note {
+	background:          #f8f8f8;
+}
+
+.note h4 {
+	background:          #a0c0e0;
+}
+
+.warn h4 {
+	background:          #e0c0a0;
+}
+
+} /* @media screen */
+
+@media screen and (max-width: 700pt) {
+
+body {
+	background:          #ffffff;
+}
+
+#left, #right {
+	display:             none;
+}
+
+#main {
+	margin:              40pt 0pt 0pt 0pt;
+	border:              0pt none;
+	background:          none;
+}
+
+#header {
+	padding:             0pt;
+}
+
+.date {
+	margin:              0pt 0pt 0pt -15pt;
+}
+
+} /* @media screen and (max-width: 700pt) */
+
+@media screen and (max-width: 500pt) {
+
+#header {
+	position:            static;
+}
+
+#main {
+	margin:              0pt;
+}
+
+} /* @media screen and (max-width: 500pt) */
 
