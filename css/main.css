@@ -125,7 +125,8 @@ body {
 	word-break:          break-all;
 }
 
-#content pre + p, .highlighter-rouge + p, #content table + p {
+#content pre + p, .highlighter-rouge + p, #content table + p,
+#content iframe + p {
 	text-align:          center;
 	margin-top:          -15pt;
 	font-size:           80%;
@@ -161,6 +162,15 @@ body {
 
 #content table + p::before {
 	content:             "Table " counter(table) ": ";
+}
+
+#content iframe {
+	display:             block;
+	max-width:           100%;
+	width:               400pt;
+	height:              225pt;
+	margin:              15pt auto;
+	border:              0pt none;
 }
 
 .thumb {

@@ -11,9 +11,9 @@ unicycling from the 80s to this day. It covers the popular riders like
 Kris Holm and Dan Heaton himself as well as people who are only well-known
 within the community, like John Foss.
 
-<div style="text-align: center;">
-<iframe src="//player.vimeo.com/video/77156452" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/77156452">Revolution One: A Story of Off-Road Unicycling</a> from <a href="http://vimeo.com/danheaton">Dan Heaton</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-</div>
+<iframe src="//player.vimeo.com/video/77156452" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+[Revolution One: A Story of Off-Road Unicycling](http://vimeo.com/77156452)
+from [Dan Heaton](http://vimeo.com/danheaton) on [Vimeo](https://vimeo.com).
 
 Dan Heaton has been notoriously absent from the public unicycling
 community for some years. All the more pleasant to see that he returns
