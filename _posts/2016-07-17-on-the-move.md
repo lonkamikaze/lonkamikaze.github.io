@@ -28,8 +28,9 @@ same width as landscape mode and displayed everything unbearably
 tiny. Some googling of the issue revealed that there is a meta tag
 that makes browsers not lie about that stuff:
 
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+~~~ html
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+~~~
 Make mobile browsers do the right thing.
 
 And suddenly things started working the way I expected. Hurray!

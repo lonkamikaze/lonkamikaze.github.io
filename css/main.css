@@ -276,6 +276,10 @@ body {
 .highlight .gd { color:      #800000; }
 .highlight .gi { color:      #008000; }
 .highlight .gu { color:      #000080; }
+.highlight .nt { color:      #808000; } /* html tag */
+.highlight .na { color:      #000080; } /* html attribute */
+.highlight .s  { color:      #008000; } /* html string */
+
 
 /* } syntax highlighting */
 
