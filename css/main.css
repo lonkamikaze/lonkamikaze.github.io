@@ -402,8 +402,12 @@ body {
 	line-height:         24pt;
 }
 
-#header li a {
-	padding:             0pt 0pt 0pt 15pt;
+#header li a, #header li:first-child a {
+	padding:             0pt 15pt 0pt 0pt;
+}
+
+#header li:last-child a {
+	padding:             0pt;
 }
 
 #header li:first-child {
