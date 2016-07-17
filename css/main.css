@@ -399,6 +399,7 @@ body {
 #header {
 	position:            static;
 	text-align:          left;
+	line-height:         24pt;
 }
 
 #header li a {
