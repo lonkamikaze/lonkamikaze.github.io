@@ -34,7 +34,6 @@ body {
 	float:               left;
 }
 
-
 #header a img, #footer a img {
 	width:               24pt;
 	height:              24pt;
@@ -359,7 +358,7 @@ body {
 
 } /* @media screen */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700pt) {
 
 body {
 	background:          #ffffff;
@@ -383,17 +382,32 @@ body {
 	margin:              0pt 0pt 0pt -15pt;
 }
 
-} /* @media screen and (max-width: 1000px) */
+} /* @media screen and (max-width: 700pt) */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 520pt) {
 
 #header {
 	position:            static;
+	text-align:          left;
+}
+
+#header li a {
+	padding:             0pt 0pt 0pt 15pt;
+}
+
+#header li:first-child {
+	float:               none;
+}
+
+#header li:first-child a img {
+	width:               24pt;
+	height:              24pt;
+	vertical-align:      middle;
 }
 
 #main {
 	margin:              0pt;
 }
 
-} /* @media screen and (max-width: 750px) */
+} /* @media screen and (max-width: 520pt) */
 
