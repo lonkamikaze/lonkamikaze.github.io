@@ -194,7 +194,7 @@ function empty(array, i) {
 }
 ~~~
 
-Workaround for mawk.
+Workaround for MAWK.
 
 Finally, MAWK uses exponential output for large numbers, even those
 cast to `int` (AWK interpreters store all numbers in double precision
