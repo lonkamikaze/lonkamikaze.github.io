@@ -352,10 +352,10 @@ In order to automatically suspend disks, update `/etc/rc.suspend`:
 Use `geliconsole` to finalise suspend and cancel if not available.
 
 The `vidcontrol -s 12` command VT-switches to the geli console, before
- the `geli` command suspends all encrypted partitions.
+the `geli` command suspends all encrypted partitions.
 
 In order for the VT-switch to work without flaw, the automatic VT
- switch to console 0 needs to be turned off:
+switch to console 0 needs to be turned off:
 
 ~~~ sh
 sysctl hw.syscons.sc_no_suspend_vtswitch=1
