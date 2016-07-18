@@ -80,7 +80,7 @@ tmpfs_load="YES"
 ~~~
 `/boot/loader.conf`
 
-~~~ sh
+~~~ conf
 # Device           Mountpoint   FStype Options    Dump Pass
 /dev/gpt/6root.eli /            ufs    rw,noatime 1    1
 /dev/gpt/6boot     /mnt/boot    ufs    rw,noatime 1    1
@@ -287,7 +287,7 @@ Because the script does not take care of grabbing the right console,
 it cannot simply be run from `/etc/ttys`. Instead it needs to be started
 by [getty(8)]. To do this a new entry into `/etc/gettytab` is required:
 
-~~~ gettytab
+~~~ conf
 #
 # geliconsole
 #
@@ -302,7 +302,7 @@ login.
 The new *terminal* can now be started by the [init(8)] process by
 adding the following line to `/etc/ttys`:
 
-~~~ ttys
+~~~ conf
 ttyvb "/usr/libexec/getty geliconsole" xterm on  secure
 ~~~
 Put the `geliconsole` terminal on console 11.
