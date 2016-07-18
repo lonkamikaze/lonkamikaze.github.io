@@ -96,8 +96,9 @@ jails required the old stack to bootstrap the build process.
 
 The solution was to add a line to `/etc/src.conf`:
 
-	WITH_GNUCXX=1
-
+~~~ make
+WITH_GNUCXX=1
+~~~
 Bulild the legacy GNU toolchain on the FreeBSD 10 host.
 
 
@@ -198,8 +199,10 @@ More legacy issues.
 In retrospect the cause is obvious, pre-10 releases of FreeBSD expect
 `cc` to be `gcc`. So it was time to update the `/etc/src.conf` again:
 
-	WITH_GCC=1
-	WITH_GNUCXX=1
+~~~ make
+WITH_GCC=1
+WITH_GNUCXX=1
+~~~
 
 Make the legacy compiler the default.
 
