@@ -361,6 +361,7 @@ switch to console 0 needs to be turned off:
 sysctl hw.syscons.sc_no_suspend_vtswitch=1
 echo hw.syscons.sc_no_suspend_vtswitch=1 >> /etc/sysctl.conf
 ~~~
+Permanently prevent automatic VT switch.
 
 Desirable Improvements
 ----------------------
