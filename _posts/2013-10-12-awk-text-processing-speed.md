@@ -185,7 +185,7 @@ The second difference to NAWK or GAWK is that MAWK does not support
 cases I only need to know whether an array has elements left at all.
 In such cases a simple function like this can be used:
 
-~~~ awk
+~~~ perl
 function empty(array, i) {
 	for (i in array) {
 		return 0
