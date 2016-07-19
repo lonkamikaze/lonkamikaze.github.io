@@ -245,6 +245,8 @@ body {
 .note h4 {
 	border-radius:       5pt 0pt 2.5pt 0pt;
 	border:              1pt solid #c0c0c0;
+	border-bottom:       none;
+	border-right:        none;
 	margin:              -6pt 0pt 0pt -6pt;
 	width:               150pt;
 	padding:             0pt 5pt;
@@ -366,6 +368,7 @@ body {
 }
 
 .note h4 {
+	border:              1pt solid #c0c0c0;
 	border-top:          none;
 	border-left:         none;
 	margin:              -5pt 0pt 0pt -5pt;
