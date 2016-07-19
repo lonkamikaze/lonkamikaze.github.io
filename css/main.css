@@ -200,7 +200,6 @@ body {
 	font-size:           80%;
 	border-radius:       0pt 2.5pt 0pt 2.5pt;
 	border:              1pt solid #c0c0c0;
-	background:          #f8f8f8;
 	padding:             0pt 5pt;
 	display:             inline-block;
 }
@@ -403,6 +402,7 @@ body {
 }
 
 .date {
+	background:          #f8f8f8;
 	margin:              0pt 0pt 0pt -20pt;
 }
 
