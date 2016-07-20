@@ -24,7 +24,7 @@ some basics as well as some advanced shell-scripting features.
 		<a href="https://angryswarm.blogspot.com/2015/02/binsh-writing-your-own-watch-command.html">from blogger</a>,
 		this article was updated {{ page.update }} to a version
 		of the script that handles the <code>HUP</code> signal
-		propperly and causes less terminal flicker.
+		properly and causes less terminal flicker.
 	</p>
 </div>
 
