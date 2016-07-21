@@ -33,6 +33,7 @@
 					{{ page.title }}
 				</h1>
 				<div class="update">{{ page.update | date: "%F" }}</div>
+				{% include tags.html tags=page.tags %}
 				{{ content }}
 				<div class="author">{{ page.author }}</div>
 			</div>

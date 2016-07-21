@@ -288,6 +288,23 @@ body {
 	border:              1pt solid #a0c0a0;
 	border-radius:       2.5pt;
 	font-variant:        small-caps;
+	white-space:         nowrap;
+}
+
+#content .tags {
+	display:             none;
+	list-style-type:     none;
+	padding:             0pt;
+	margin-top:          -10pt;
+	text-align:          right;
+}
+
+#content .tags li {
+	display:             none;
+}
+
+#content .tag {
+	color:               #000000;
 }
 
 /* } optional meta */
@@ -506,6 +523,14 @@ body {
 
 .date {
 	margin:              0pt 0pt 0pt -15pt;
+}
+
+#content .tags {
+	display:             block;
+}
+
+#content .tags li {
+	display:             inline-block;
 }
 
 } /* @media screen and (max-width: 720pt) */
