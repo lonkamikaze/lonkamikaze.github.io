@@ -2,7 +2,7 @@
 title: AWK Text Processing Speed
 journal: 1
 tags:
-- awk
+- AWK
 - FreeBSD
 - GNU
 ---
