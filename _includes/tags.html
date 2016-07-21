@@ -1,0 +1,4 @@
+<ul class="tags">
+{% for tag in include.tags %}	<li>{% include tag.html tag=tag %}</li>
+{% endfor %}
+</ul>

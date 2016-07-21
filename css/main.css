@@ -173,6 +173,20 @@ body {
 	border:              0pt none;
 }
 
+#tagspage > * {
+	display:             none;
+}
+
+#tagspage > a:target + h4,
+#tagspage > a:target + h4 + ul {
+	display:             block;
+}
+
+#tagspage ul {
+	list-style-type:     none;
+	padding:             0pt;
+}
+
 .thumb {
 	width:               100pt;
 	height:              100pt;
