@@ -155,6 +155,10 @@ body {
 	content:             counter(section) "." counter(subsection) ". ";
 }
 
+#content blockquote {
+	font-style:          italic;
+}
+
 #content pre, .details {
 	border-radius:       5pt;
 	border:              1pt solid #c0c0c0;
@@ -212,6 +216,14 @@ body {
 	max-width:           100%;
 	width:               400pt;
 	height:              225pt;
+	margin:              15pt auto;
+	border:              0pt none;
+}
+
+#content img {
+	display:             block;
+	max-width:           100%;
+	max-height:          calc(100vh - 30pt);
 	margin:              15pt auto;
 	border:              0pt none;
 }
@@ -478,6 +490,10 @@ body {
 	background:          #fcfcfc;
 }
 
+#content img {
+	max-height:          calc(100vh - 70pt);
+}
+
 .date {
 	background:          #f8f8f8;
 	margin:              0pt 0pt 0pt -20pt;
@@ -560,6 +576,10 @@ body {
 
 #main {
 	margin:              0pt;
+}
+
+#content img {
+	max-height:          calc(100vh - 30pt);
 }
 
 } /* @media screen and (max-width: 520pt) */
