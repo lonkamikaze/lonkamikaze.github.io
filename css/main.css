@@ -72,16 +72,59 @@ body {
 	opacity:             1;
 }
 
-#left {
-	padding:             40pt 15pt 0pt 15pt;
-	float:               left;
+#left, #right {
 	width:               100pt;
+	padding:             0pt 5pt;
+}
+
+#left a, #right a {
+	display:             block;
+	text-decoration:     none;
+	color:               #404040;
+}
+
+#left a:hover, #right a:hover {
+	color:               #000000;
+}
+
+#left h4, #right h4 {
+	margin-bottom:       0pt;
+}
+
+#left ul, #right ul {
+	background:          #ffffff;
+	border:              1pt solid #c0c0c0;
+	border-left:         0pt none;
+	border-radius:       0pt 5pt 5pt 0pt;
+	list-style-type:     none;
+	padding:             5pt;
+	margin:              0pt 0pt 0pt -5pt;
+}
+
+#left {
+	float:               left;
 }
 
 #right {
-	padding:             40pt 15pt 0pt 15pt;
-	float:               right;
-	width:               100pt;
+	position:            fixed;
+	right:               0pt;
+}
+
+#right .tags {
+	border:              0pt none;
+	padding:             0pt;
+	background:          none;
+}
+
+#right .tags li {
+	margin-top:          5pt;
+}
+
+#right .tags li a {
+	display:             inline-block;
+	border-radius:       0pt 2.5pt 2.5pt 0pt;
+	border-left:         0pt none;
+	padding:             0pt 5pt;
 }
 
 #main {
@@ -393,7 +436,7 @@ body {
 @media screen {
 
 body {
-	background:          #404040;
+	background:          #f0f0f0;
 	overflow-y:          scroll;
 }
 

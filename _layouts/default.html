@@ -22,7 +22,10 @@
 			</a></li>
 		</ul>
 		<div id="left"></div>
-		<div id="right"></div>
+		<div id="right">
+			{% include social.html %}
+			{% include tags.html tags=page.tags %}
+		</div>
 		<div id="main">
 			<div id="content">
 				<h1>
