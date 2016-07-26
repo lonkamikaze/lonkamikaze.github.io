@@ -245,8 +245,8 @@ body {
 	display:             none;
 }
 
-#tagspage > a:target + h4,
-#tagspage > a:target + h4 + ul {
+#tagspage > h4:target,
+#tagspage > h4:target + ul {
 	display:             block;
 }
 
