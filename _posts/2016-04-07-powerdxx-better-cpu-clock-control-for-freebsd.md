@@ -6,14 +6,13 @@ tags:
 - power-management
 ---
 
+{% include man.md p="powerd" s=8 %}
+{% include man.md p="sysctl" s=3 %}
+{% include man.md p="cpufreq" s=4 %}
 Setting of P-States (power states a.k.a. steppings) on FreeBSD is
 managed by [powerd(8)]. It has been with us since 2005, a time when
 the Pentium-M single-core architecture was the cutting edge choice
 for notebooks and dual-core just made its way to the desktop.
-
-{% include man.md p="powerd" s=8 %}
-{% include man.md p="sysctl" s=3 %}
-{% include man.md p="cpufreq" s=4 %}
 
 That is not to say that multi-core architectures were not considered
 when `powerd` was designed, but as the number of cores grows and hyper-threading
