@@ -21,7 +21,9 @@
 				<img src="/img/contact.svg" alt="icon" />contact
 			</a></li>
 		</ul>
-		<div id="left"></div>
+		<div id="left">
+			{% include toc.html %}
+		</div>
 		<div id="right">
 			{% include social.html %}
 			{% include tags.html tags=page.tags %}

@@ -91,7 +91,29 @@ body {
 	margin-bottom:       0pt;
 }
 
-#left ul, #right ul {
+#left {
+	float:               left;
+}
+
+#left ol {
+	font-size:           80%;
+	padding-left:        1.5em;
+}
+
+#left > ol {
+	background:          #ffffff;
+	border:              1pt solid #c0c0c0;
+	border-left:         0pt none;
+	border-right:        0pt none;
+	margin:              0pt -5pt;
+}
+
+#right {
+	position:            fixed;
+	right:               0pt;
+}
+
+#right ul {
 	background:          #ffffff;
 	border:              1pt solid #c0c0c0;
 	border-left:         0pt none;
@@ -99,15 +121,6 @@ body {
 	list-style-type:     none;
 	padding:             5pt;
 	margin:              0pt 0pt 0pt -5pt;
-}
-
-#left {
-	float:               left;
-}
-
-#right {
-	position:            fixed;
-	right:               0pt;
 }
 
 #right .tags {
