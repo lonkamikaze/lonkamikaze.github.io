@@ -3,6 +3,7 @@
 {%	if forloop.first %}
 <h4>Contents</h4>
 <ol>
+<a href="#main">Top</a>
 {%	endif %}
 {%	assign h2_tail = h2 | split: '</h2>' %}
 <li><a href="#{{ h2_tail[0] }}</a></li>
@@ -18,6 +19,7 @@
 {%		endif %}
 {%	endfor %}
 {%	if forloop.last %}
+<a href="#footer">Bottom</a>
 </ol>
 {%	endif %}
 {% endfor %}
