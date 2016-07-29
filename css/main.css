@@ -496,12 +496,12 @@ body {
 }
 
 #content h2, #content h3 {
-	margin-top:          calc(16.6px - 55pt);
+	margin-top:          calc(0.83em - 55pt);
 	padding-top:         55pt;
 }
 
 #content h3 {
-	margin-top:          calc(15.6px - 55pt);
+	margin-top:          calc(1em - 55pt);
 }
 
 #content pre, .details {
@@ -610,12 +610,12 @@ body {
 }
 
 #content h2, #content h3 {
-	margin-top:          calc(16.6px - 15pt);
+	margin-top:          calc(0.83em - 15pt);
 	padding-top:         15pt;
 }
 
 #content h3 {
-	margin-top:          calc(15.6px - 15pt);
+	margin-top:          calc(1em - 15pt);
 }
 
 
