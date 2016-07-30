@@ -488,7 +488,7 @@ body {
 	margin:              0pt 100pt 0pt 100pt;
 	border-left:         1pt solid #c0c0c0;
 	border-right:        1pt solid #c0c0c0;
-	min-height:          calc(100vh - 40pt);
+	min-height:          100vh;
 }
 
 #content {
