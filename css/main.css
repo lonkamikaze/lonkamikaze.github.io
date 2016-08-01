@@ -202,12 +202,16 @@ body {
 	font-weight:         bold;
 }
 
-#content a, a:visited {
+#content a, #content a:visited .date {
 	color:               #600000;
 	text-decoration:     none;
 }
 
-#content a:hover {
+#content a .date, #content a:visited .date {
+	color:               #000000;
+}
+
+#content a:hover, #content a:hover .date {
 	color:               #e04000;
 }
 
