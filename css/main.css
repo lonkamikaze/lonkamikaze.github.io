@@ -475,6 +475,14 @@ body {
 	margin:              -5pt 0pt 0pt -5pt;
 }
 
+/* syntax hilghighting { */
+.highlight .err { background: none; outline: #e3d2d2 solid 2pt; } /* Error */
+.highlight .gd { background: none; outline: #ffdddd solid 2pt; } /* Generic.Deleted */
+.highlight .gd .x { background: none; outline: #ffaaaa solid 2pt; } /* Generic.Deleted.Specific */
+.highlight .gi { background: none; outline: #ddffdd solid 2pt; } /* Generic.Inserted */
+.highlight .gi .x { background: none; outline: #aaffaa solid 2pt; } /* Generic.Inserted.Specific */
+/* } syntax hilghighting */
+
 } /* @media print */
 
 @media screen {
