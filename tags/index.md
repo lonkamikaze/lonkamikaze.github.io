@@ -7,11 +7,11 @@ title: Tags
 	<ul>
 {%	for post in tag[1] %}
 		<li>
-			<div class="date">{{ post.date | date: site.style.date }}</div>
-			<a href="{{ post.id }}">{{ post.title }}</a>
-{%		for tag in post.tags %}
-			{% include tag.html tag=tag %}
-{%		endfor %}
+			<a href="{{ post.id }}">
+				<div class="date">{{ post.date | date: site.style.date }}</div>
+				{{ post.title }}
+			</a>
+{%		for tag in post.tags %}{% include tag.html tag=tag %}{%	endfor %}
 		</li>
 {%	endfor %}
 	</ul>
