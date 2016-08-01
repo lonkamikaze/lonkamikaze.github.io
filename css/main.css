@@ -274,6 +274,16 @@ body {
 	border-bottom:       1pt solid #c0c0c0;
 }
 
+.latest {
+	font-size:           80%;
+	list-style-type:     none;
+}
+
+.latest .date {
+	margin:              0pt 0pt 0pt -20pt;
+}
+
+
 /* optional meta { */
 
 .date:empty, .update:empty, .author:empty {
