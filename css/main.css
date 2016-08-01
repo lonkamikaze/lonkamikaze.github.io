@@ -107,6 +107,8 @@ body {
 	border-left:         0pt none;
 	border-right:        0pt none;
 	margin:              0pt -5pt;
+	overflow-y:          auto;
+	max-height:          calc(100vh - 55pt - 2.83em);
 }
 
 #right {
