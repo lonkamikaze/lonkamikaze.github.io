@@ -1,7 +1,6 @@
 body {
 	margin:              0pt;
 	padding:             0pt;
-	font-size:           10pt;
 	tab-size:            4;
 	-moz-tab-size:       4; /**< CSS3 support, anybody? */
 }
@@ -18,7 +17,7 @@ body {
 	padding:             0pt 101pt;
 	font-family:         sans-serif;
 	font-variant:        small-caps;
-	font-size:           140%;
+	font-size:           14pt;
 	line-height:         40pt;
 	box-shadow:          0pt 0pt 2pt;
 	list-style-type:     none;
@@ -76,6 +75,7 @@ body {
 	position:            fixed;
 	width:               100pt;
 	padding:             40pt 5pt 0pt 5pt;
+	font-size:           10pt;
 }
 
 #left a, #right a {
