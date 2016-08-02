@@ -330,6 +330,7 @@ body {
 	border-radius:       2.5pt;
 	font-variant:        small-caps;
 	white-space:         nowrap;
+	padding:             0pt 2.5pt;
 }
 
 #content .tags {
