@@ -7,7 +7,7 @@
 {%	endif %}
 {%	assign h2_tail = h2 | split: '</h2>' %}
 <li><a href="#{{ h2_tail[0] }}</a></li>
-{%	assign h3s = content | split: '<h3 id="' %}
+{%	assign h3s = h2_tail[1] | split: '<h3 id="' %}
 {%	for h3 in h3s offset: 1 %}
 {%		if forloop.first %}
 <ol>
