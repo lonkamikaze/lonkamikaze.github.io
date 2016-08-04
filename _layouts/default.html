@@ -38,13 +38,15 @@
 				<div class="update">{{ page.update | date: "%F" }}</div>
 				{% include tags.html tags=page.tags %}
 				{{ content }}
-				<div class="author">{{ page.author }}</div>
+				<ul>
+					<li class="author">{{ page.author }}</li>
+					<li><a href="{{ site.history }}/{{ page.path }}">
+						<img src="/img/history.svg" alg="icon" />page history
+					</a></li>
+				</ul>
 			</div>
 			<ul id="footer">
 				<li>© {{ site.copy }}</li>
-				<li><a href="{{ site.history }}/{{ page.path }}">
-					<img src="/img/history.svg" alg="icon" />page history
-				</a></li>
 				<li><a href="/legal">
 					<img src="/img/legal.svg" alt="icon" />legal (Impressum)
 				</a></li>
