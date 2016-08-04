@@ -531,12 +531,12 @@ body {
 	position:            relative;
 }
 
-#content h2, #content h3 {
+#content h2:target, #content h3:target {
 	margin-top:          calc(0.83em - 55pt);
 	padding-top:         55pt;
 }
 
-#content h3 {
+#content h3:target {
 	margin-top:          calc(1em - 55pt);
 }
 
@@ -645,12 +645,12 @@ body {
 	padding:             0pt 15pt;
 }
 
-#content h2, #content h3 {
+#content h2:target, #content h3:target {
 	margin-top:          calc(0.83em - 15pt);
 	padding-top:         15pt;
 }
 
-#content h3 {
+#content h3:target {
 	margin-top:          calc(1em - 15pt);
 }
 
