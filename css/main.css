@@ -234,6 +234,10 @@ body {
 	content:             "Table " counter(table) ": ";
 }
 
+#content li {
+	margin:              1ex 0ex;
+}
+
 #content iframe {
 	display:             block;
 	max-width:           100%;
