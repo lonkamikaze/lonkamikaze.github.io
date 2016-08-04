@@ -40,10 +40,15 @@
 				{{ content }}
 				<div class="author">{{ page.author }}</div>
 			</div>
-			<div id="footer">
-				© {{ site.copy }}
-				<a href="/legal"><img src="/img/legal.svg" alt="icon" />legal (Impressum)</a>
-			</div>
+			<ul id="footer">
+				<li>© {{ site.copy }}</li>
+				<li><a href="{{ site.history }}/{{ page.path }}">
+					<img src="/img/history.svg" alg="icon" />page history
+				</a></li>
+				<li><a href="/legal">
+					<img src="/img/legal.svg" alt="icon" />legal (Impressum)
+				</a></li>
+			</ul>
 		</div>
 	</body>
 </html>

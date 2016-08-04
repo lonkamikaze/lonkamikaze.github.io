@@ -25,11 +25,11 @@ body {
 	text-align:          right;
 }
 
-#header li {
+#header li, #footer li {
 	display:             inline-block;
 }
 
-#header li:first-child {
+#header li:first-child, #footer li:first-child {
 	float:               left;
 }
 
@@ -468,11 +468,14 @@ body {
 	line-height:         40pt;
 	font-size:           80%;
 	border-top:          solid 1pt #c0c0c0;
+	list-style-type:     none;
+	padding:             0pt;
+	margin:              0pt;
+	text-align:          right;
 }
 
-#footer a {
-	padding:             0pt;
-	float:               right;
+#footer li:last-child a {
+	margin-right:        -15pt;
 }
 
 #footer a img {
