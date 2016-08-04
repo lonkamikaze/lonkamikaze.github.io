@@ -98,6 +98,10 @@ body {
 
 #left ol {
 	font-size:           80%;
+	padding-left:        2.5em;
+}
+
+#left ol ol {
 	padding-left:        1.5em;
 }
 
