@@ -3,8 +3,6 @@ title: Building a Cross Device Site
 journal: 1
 tags:
 - web-design
-- compatibility
-- performance
 ---
 
 This isn't the fanciest website you have or will ever have seen. But
@@ -178,7 +176,7 @@ user events often seems convenient and attractive. Don't use it anyway.
 
 ### Why?
 
-JavaScript it is a speed drag, CPU hog and notoriously unpopular
+JavaScript is a speed drag, CPU hog and notoriously unpopular
 within my peer group for wasting energy on mobile devices. Most legitimate
 uses that do not require communication with a server have now been
 covered by CSS.
