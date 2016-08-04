@@ -3,6 +3,7 @@ title: On The Move
 news: 1
 tags:
 - meta
+- web-design
 ---
 The transfer from [my Blogger page](http://angryswarm.blogspot.com)
 is in progress. Because I'm manually converting content from HTML
