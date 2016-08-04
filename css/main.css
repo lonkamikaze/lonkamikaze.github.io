@@ -291,7 +291,6 @@ body {
 	margin:              0pt 0pt 0pt -20pt;
 }
 
-
 /* optional meta { */
 
 .date:empty, .update:empty, .author:empty {
@@ -324,7 +323,7 @@ body {
 	content:             "Latest update: "
 }
 
-.author:before{
+.author:before {
 	content:             "Written by: "
 }
 
