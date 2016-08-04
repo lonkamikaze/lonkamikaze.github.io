@@ -3,7 +3,7 @@ title: Tags
 ---
 <div id="tagspage">
 {% for tag in site.tags %}
-	<h4 id="tag-{{ tag[0] | escape }}">{{ tag[0] }}</h4>
+	<h2 id="tag-{{ tag[0] | escape }}">{{ tag[0] }}</h2>
 	<ul>
 {%	for post in tag[1] %}
 		<li>

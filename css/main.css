@@ -259,9 +259,13 @@ body {
 	display:             none;
 }
 
-#tagspage > h4:target,
-#tagspage > h4:target + ul {
+#tagspage > h2:target,
+#tagspage > h2:target + ul {
 	display:             block;
+}
+
+#tagspage > h2:before {
+	content:             "";
 }
 
 #tagspage ul {
