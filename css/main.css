@@ -676,6 +676,7 @@ body {
 #main {
 	margin:              0pt;
 	padding:             0pt 15pt;
+	min-height:          0pt;
 }
 
 #content h2:target, #content h3:target {
