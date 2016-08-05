@@ -260,11 +260,12 @@ body {
 	padding:             0pt;
 	list-style-type:     none;
 	text-align:          right;
+	font-size:           80%;
+	line-height:         20pt;
 }
 
 #content ul:last-child li {
 	display:             inline-block;
-	font-size:           80%;
 }
 
 #content ul:last-child li:first-child {
@@ -345,11 +346,11 @@ body {
 }
 
 .update, .author {
-	font-size:           80%;
 	font-style:          italic;
 }
 
 .update {
+	font-size:           80%;
 	margin-top:          -10pt;
 }
 
