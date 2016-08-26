@@ -14,12 +14,12 @@ body {
 	width:               100%;
 	top:                 0pt;
 	background:          #ffffff;
-	padding:             0pt 101pt;
+	padding:             0pt 100pt;
 	font-family:         sans-serif;
 	font-variant:        small-caps;
 	font-size:           14pt;
 	line-height:         40pt;
-	box-shadow:          0pt 0pt 2pt;
+	box-shadow:          0pt -3pt 5pt;
 	list-style-type:     none;
 	margin:              0pt;
 	text-align:          right;
@@ -107,9 +107,6 @@ body {
 
 #left > ol {
 	background:          #ffffff;
-	border:              1pt solid #c0c0c0;
-	border-left:         0pt none;
-	border-right:        0pt none;
 	margin:              0pt -5pt;
 	overflow-y:          auto;
 	max-height:          calc(100vh - 55pt - 2.83em);
@@ -121,8 +118,6 @@ body {
 
 #right ul {
 	background:          #ffffff;
-	border:              1pt solid #c0c0c0;
-	border-left:         0pt none;
 	border-radius:       0pt 5pt 5pt 0pt;
 	list-style-type:     none;
 	padding:             5pt;
@@ -179,16 +174,21 @@ body {
 }
 
 #content pre, .details {
+	counter-increment:   illustration;
+}
+
+.details {
 	border-radius:       5pt;
-	border:              1pt solid #c0c0c0;
 	margin:              15pt;
 	padding:             15pt;
-	counter-increment:   illustration;
 }
 
 #content pre {
 	white-space:         pre-wrap;
 	word-break:          break-all;
+	border-left:         1pt solid #c0c0c0;
+	margin:              15pt 0pt 15pt -5pt;
+	padding-left:        5pt;
 }
 
 #content pre + p, .highlighter-rouge + p, #content table + p,
@@ -206,22 +206,21 @@ body {
 	font-weight:         bold;
 }
 
-#content a, #content a:visited .date {
+#content a {
 	color:               #600000;
 	text-decoration:     none;
 }
 
-#content a .date, #content a:visited .date {
-	color:               #000000;
+#content a:hover, #content li > a:first-child:hover {
+	color:               #e04000;
 }
 
-#content a:hover, #content a:hover .date {
-	color:               #e04000;
+#content li > a:first-child, #content h4 > a {
+	color:               #000000;
 }
 
 #content table {
 	border-radius:       5pt;
-	border:              1pt solid #c0c0c0;
 	margin:              15pt auto;
 	counter-increment:   table;
 }
@@ -340,7 +339,6 @@ body {
 .date {
 	font-size:           80%;
 	border-radius:       0pt 2.5pt 0pt 2.5pt;
-	border:              1pt solid #c0c0c0;
 	padding:             0pt 5pt;
 	display:             inline-block;
 }
@@ -368,7 +366,6 @@ body {
 
 .tag {
 	font-size:           80%;
-	border:              1pt solid #a0c0a0;
 	border-radius:       2.5pt;
 	font-variant:        small-caps;
 	white-space:         nowrap;
@@ -395,17 +392,13 @@ body {
 
 .note {
 	border-radius:       5pt;
-	border:              1pt solid #c0c0c0;
 	margin:              15pt;
 	padding:             5pt;
 }
 
 .note h4 {
 	border-radius:       5pt 0pt 2.5pt 0pt;
-	border:              1pt solid #c0c0c0;
-	border-bottom:       none;
-	border-right:        none;
-	margin:              -6pt 0pt 0pt -6pt;
+	margin:              -5pt 0pt 0pt -5pt;
 	width:               150pt;
 	padding:             0pt 5pt;
 	font-variant:        small-caps;
@@ -516,7 +509,7 @@ body {
 
 @media print {
 
-#header, #left, #right, #footer {
+#header, #left, #right, #footer, #content > ul:last-child li:last-child {
 	display:             none;
 }
 
@@ -524,14 +517,16 @@ body {
 	margin:              50pt;
 }
 
+#content table {
+	border-collapse:     collapse;
+}
+
 #content td {
+	margin:              0pt;
 	border:              1pt solid #c0c0c0;
 }
 
 .note h4 {
-	border:              1pt solid #c0c0c0;
-	border-top:          none;
-	border-left:         none;
 	margin:              -5pt 0pt 0pt -5pt;
 }
 
@@ -548,7 +543,7 @@ body {
 @media screen {
 
 body {
-	background:          #f0f0f0;
+	background:          #e0e0e0;
 	overflow-y:          scroll;
 }
 
@@ -556,8 +551,6 @@ body {
 	background:          #ffffff;
 	padding:             40pt 15pt 0pt 15pt;
 	margin:              0pt 100pt 0pt 100pt;
-	border-left:         1pt solid #c0c0c0;
-	border-right:        1pt solid #c0c0c0;
 	min-height:          100vh;
 }
 
@@ -579,11 +572,15 @@ body {
 }
 
 #content table {
-	background:          #f0f0f0;
+	background:          #e8e8e8;
 }
 
 #content td {
-	background:          #fcfcfc;
+	background:          #ffffff;
+}
+
+#content table tr:nth-child(2n) td {
+	background:          #f0f0f0;
 }
 
 #content img {
@@ -591,7 +588,7 @@ body {
 }
 
 .date {
-	background:          #f8f8f8;
+	background:          #c0c0c0;
 	margin:              0pt 0pt 0pt -20pt;
 }
 
@@ -600,7 +597,7 @@ body {
 }
 
 .note {
-	background:          #f8f8f8;
+	background:          #e0e0e0;
 }
 
 .note h4 {
