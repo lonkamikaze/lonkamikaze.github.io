@@ -526,8 +526,13 @@ body {
 	border:              1pt solid #c0c0c0;
 }
 
+.date, .note, .note h4 {
+	border:              1pt solid #c0c0c0;
+}
+
 .note h4 {
-	margin:              -5pt 0pt 0pt -5pt;
+	border-top:          0pt none;
+	border-left:         0pt none;
 }
 
 /* syntax hilghighting { */
@@ -588,7 +593,7 @@ body {
 }
 
 .date {
-	background:          #c0c0c0;
+	background:          #d0d0d0;
 	margin:              0pt 0pt 0pt -20pt;
 }
 
@@ -597,7 +602,7 @@ body {
 }
 
 .note {
-	background:          #e0e0e0;
+	background:          #f0f0f0;
 }
 
 .note h4 {
