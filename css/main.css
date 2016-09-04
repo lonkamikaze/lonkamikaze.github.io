@@ -152,7 +152,7 @@ body {
 }
 
 #content h1 {
-	counter-reset:       illustration section table;
+	counter-reset:       listing section table;
 }
 
 #content h2 {
@@ -173,8 +173,8 @@ body {
 	font-style:          italic;
 }
 
-#content pre, .details {
-	counter-increment:   illustration;
+#content pre {
+	counter-increment:   listing;
 }
 
 .details {
@@ -199,7 +199,7 @@ body {
 }
 
 #content pre + p::before, .highlighter-rouge + p::before {
-	content:             "Illustration " counter(illustration) ": ";
+	content:             "Listing " counter(listing) ": ";
 }
 
 #content dt {
