@@ -23,7 +23,7 @@ want to play with it, fetch the repo, run `make` and make sure to
 read the manual page:
 
 ~~~ sh
-nroff -mdoc loadrec.1 | less -r
+man ./loadrec.1 | less -r
 ~~~
 Open the [loadrec(1)] manual from the repository snapshot.
 
