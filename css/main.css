@@ -211,11 +211,11 @@ body {
 	text-decoration:     none;
 }
 
-#content a:hover, #content li > a:first-child:hover {
+#content a:hover, #content .latest li > a:first-child:hover {
 	color:               #e04000;
 }
 
-#content li > a:first-child, #content h4 > a {
+#content .latest li > a:first-child, #content h4 > a {
 	color:               #000000;
 }
 
