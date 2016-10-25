@@ -1,4 +1,5 @@
-<ul class="tags">
-{% for tag in include.tags %}	<li>{% include tag.html tag=tag %}</li>
+<nav class="tags">
+{% for tag in include.tags %}
+	{% include tag.html tag=tag %}
 {% endfor %}
-</ul>
+</nav>

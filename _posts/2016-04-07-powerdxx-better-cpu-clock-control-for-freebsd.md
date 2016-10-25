@@ -60,7 +60,7 @@ Note that …
   clock frequency for all cores.
 - … `powerd` uses the sum of all loads to control the clock frequency.
 
-![powerd clock control](/illustrations/2016-04-07 clock control legacy.svg
+![powerd clock control](/illustrations/2016-04-07%20clock%20control%20legacy.svg
                         "Architecture of powerd.")
 
 Powerd using the sum of all loads to rate the overall load of the
@@ -113,7 +113,7 @@ default) can be collected. This works as a low pass filter but is
 less damaging to the responsiveness of the system than increasing
 the polling interval.
 
-![powerd clock control](/illustrations/2016-04-07 clock control.svg
+![powerd clock control](/illustrations/2016-04-07%20clock%20control.svg
                         "Architecture of powerd++.")
 
 Resources
