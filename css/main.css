@@ -152,14 +152,18 @@ article > h2 {
 	counter-reset:       subsection;
 }
 
-article > h2:before {
+article > h2::after {
 	counter-increment:   section;
-	content:             counter(section) ". ";
+	content:             counter(section) ".";
+	float:               left;
+	margin-right:        .5ex;
 }
 
-article > h3:before {
+article > h3::after {
 	counter-increment:   subsection;
-	content:             counter(section) "." counter(subsection) ". ";
+	content:             counter(section) "." counter(subsection) ".";
+	float:               left;
+	margin-right:        .5ex;
 }
 
 article blockquote {
@@ -317,15 +321,15 @@ time {
 	background:          none;
 }
 
-.update:before {
+.update::before {
 	content:             "Latest update: ";
 }
 
-.author:before {
+.author::before {
 	content:             "Written by: ";
 }
 
-.author:empty:before {
+.author:empty::before {
 	content:             "";
 }
 
@@ -535,7 +539,7 @@ main {
 	min-height:          calc(100vh - 41pt);
 }
 
-:target:before {
+:target::before {
 	display:             block;
 	position:            relative;
 	margin-top:          -50pt;
@@ -655,7 +659,7 @@ main {
 	min-height:          0pt;
 }
 
-:target:before {
+:target::before {
 	margin-top:          -10pt;
 	height:              10pt;
 }
