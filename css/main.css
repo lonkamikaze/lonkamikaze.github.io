@@ -317,11 +317,11 @@ header a:first-child img {
 
 /* optional meta { */
 
-.date:empty, .update:empty, .author:empty {
+time:empty, .update:empty, .author:empty {
 	display:             none;
 }
 
-.date {
+time {
 	font-size:           80%;
 	border-radius:       0pt 2.5pt 0pt 2.5pt;
 	padding:             0pt 5pt;
@@ -511,7 +511,7 @@ header, aside , body > footer, footer nav {
 	border:              1pt solid #c0c0c0;
 }
 
-.date, .note, .note h4 {
+time, .note, .note h4 {
 	border:              1pt solid #c0c0c0;
 }
 
@@ -577,7 +577,7 @@ body {
 	max-height:          calc(100vh - 70pt);
 }
 
-.date {
+time {
 	position:            relative;
 	background:          #d0d0d0;
 	margin:              0pt 0pt 0pt -20pt;
@@ -630,7 +630,7 @@ body > footer {
 	margin:              0pt;
 }
 
-.date {
+time {
 	margin:              0pt 0pt 0pt -15pt;
 }
 

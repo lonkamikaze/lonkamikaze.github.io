@@ -5,7 +5,7 @@ title: News/Journal
 <article>
 	<h1>
 		<a href="{{ post.id }}">
-			<span class="date">{{ post.date | date: site.style.date }}</span>
+			<time>{{ post.date | date: site.style.date }}</time>
 			{{ post.title }}
 		</a>
 {%	for tag in post.tags %}{% include tag.html tag=tag %}{% endfor %}
