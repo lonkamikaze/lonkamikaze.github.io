@@ -273,23 +273,6 @@ main > footer a:hover img {
 	opacity:             1;
 }
 
-#tagspage > * {
-	display:             none;
-}
-
-#tagspage > :target {
-	display:             block;
-}
-
-#tagspage ul {
-	list-style-type:     none;
-	padding:             0pt;
-}
-
-#tagspage li a {
-	color:               #000000;
-}
-
 .thumb {
 	width:               100pt;
 	height:              100pt;
