@@ -535,17 +535,12 @@ main {
 	min-height:          calc(100vh - 41pt);
 }
 
-main {
+:target:before {
+	display:             block;
 	position:            relative;
-}
-
-article h2:target, article h3:target {
-	margin-top:          calc(0.83em - 55pt);
-	padding-top:         55pt;
-}
-
-article h3:target {
-	margin-top:          calc(1em - 55pt);
+	margin-top:          -50pt;
+	height:              50pt;
+	content:             "";
 }
 
 article pre, .details {
@@ -660,13 +655,9 @@ main {
 	min-height:          0pt;
 }
 
-article h2:target, article h3:target {
-	margin-top:          calc(0.83em - 15pt);
-	padding-top:         15pt;
-}
-
-article h3:target {
-	margin-top:          calc(1em - 15pt);
+:target:before {
+	margin-top:          -10pt;
+	height:              10pt;
 }
 
 article img {
