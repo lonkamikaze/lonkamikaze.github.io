@@ -354,11 +354,18 @@ time {
 	padding:             0pt 2.5pt;
 }
 
+article > .tags {
+	position:            relative;
+	top:                 -10pt;
+	display:             inline;
+}
+
+article > .tags + * {
+	margin-top:          2pt;
+}
+
 main > article > .tags {
 	display:             none;
-	padding:             0pt;
-	margin-top:          -10pt;
-	text-align:          right;
 }
 
 .tag {
@@ -636,7 +643,7 @@ time {
 }
 
 main > article > .tags {
-	display:             block;
+	display:             inline;
 }
 
 } /* @media screen and (max-width: 720pt) */
