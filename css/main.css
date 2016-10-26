@@ -40,7 +40,7 @@ header a img, footer a img {
 	border:              0pt none;
 }
 
-header a, footer a, #main footer a {
+header a, footer a {
 	text-decoration:     none;
 	color:               #808080;
 	padding:             0pt 15pt 0pt 0pt;
@@ -48,7 +48,7 @@ header a, footer a, #main footer a {
 	display:             inline-block;
 }
 
-header a:hover, footer a:hover, #main footer a:hover {
+header a:hover, footer a:hover {
 	color:               #404040;
 }
 
@@ -67,25 +67,26 @@ header a:first-child img {
 	opacity:             1;
 }
 
-#main > aside {
+main > aside {
 	position:            fixed;
 	width:               100pt;
 	padding:             0pt 5pt;
 	font-size:           10pt;
 }
 
-#main > aside a {
+main > aside a {
 	display:             block;
 	text-decoration:     none;
 	color:               #404040;
 }
 
-#main > aside a:hover {
+main > aside a:hover {
 	color:               #000000;
 }
 
-#main > aside h1 {
-	margin-bottom:       0pt;
+main > aside h1 {
+	margin:              15pt 0pt 0pt 0pt;
+	font-size:           100%;
 }
 
 #left {
@@ -139,33 +140,33 @@ header a:first-child img {
 	padding:             0pt 5pt;
 }
 
-#main {
+main {
 	font-family:         serif;
 }
 
-#main > h1 {
+article > h1 {
 	counter-reset:       listing section table;
 }
 
-#main > h2 {
+article > h2 {
 	counter-reset:       subsection;
 }
 
-#main > h2:before {
+article > h2:before {
 	counter-increment:   section;
 	content:             counter(section) ". ";
 }
 
-#main > h3:before {
+article > h3:before {
 	counter-increment:   subsection;
 	content:             counter(section) "." counter(subsection) ". ";
 }
 
-#main blockquote {
+article blockquote {
 	font-style:          italic;
 }
 
-#main pre {
+article pre {
 	counter-increment:   listing;
 }
 
@@ -175,7 +176,7 @@ header a:first-child img {
 	padding:             15pt;
 }
 
-#main pre {
+article pre {
 	white-space:         pre-wrap;
 	word-break:          break-all;
 	border-left:         1pt solid #c0c0c0;
@@ -183,52 +184,52 @@ header a:first-child img {
 	padding-left:        5pt;
 }
 
-#main pre + p, .highlighter-rouge + p, #main table + p, #main iframe + p {
+article pre + p, .highlighter-rouge + p, article table + p, article iframe + p {
 	text-align:          center;
 	margin-top:          -15pt;
 	font-size:           80%;
 }
 
-#main pre + p::before, .highlighter-rouge + p::before {
+article pre + p::before, .highlighter-rouge + p::before {
 	content:             "Listing " counter(listing) ": ";
 }
 
-#main dt {
+article dt {
 	font-weight:         bold;
 }
 
-#main a {
+article a {
 	color:               #600000;
 	text-decoration:     none;
 }
 
-#main a:hover {
+article a:hover, .tag:hover {
 	color:               #e04000;
 }
 
-#main article > h1 a {
+article > h1 a {
 	color:               #000000;
 }
 
-#main table {
+article table {
 	border-radius:       5pt;
 	margin:              15pt auto;
 	counter-increment:   table;
 }
 
-#main td {
+article td {
 	margin:              1pt;
 }
 
-#main table + p::before {
+article table + p::before {
 	content:             "Table " counter(table) ": ";
 }
 
-#main li {
+article li {
 	margin:              1ex 0ex;
 }
 
-#main iframe {
+article iframe {
 	display:             block;
 	max-width:           100%;
 	width:               400pt;
@@ -237,7 +238,7 @@ header a:first-child img {
 	border:              0pt none;
 }
 
-#main img {
+article img {
 	display:             block;
 	max-width:           100%;
 	max-height:          calc(100vh - 30pt);
@@ -245,19 +246,19 @@ header a:first-child img {
 	border:              0pt none;
 }
 
-#main > footer {
+main > footer {
 	text-align:          right;
 }
 
-#main > footer a {
+main > footer a {
 	display:             inline-block;
 }
 
-#main > footer .author {
+main > footer .author {
 	float:               left;
 }
 
-#main > footer a img {
+main > footer a img {
 	width:               20pt;
 	height:              20pt;
 	display:             inline-block;
@@ -268,7 +269,7 @@ header a:first-child img {
 	border:              0pt none;
 }
 
-#main > footer a:hover img {
+main > footer a:hover img {
 	opacity:             1;
 }
 
@@ -353,14 +354,14 @@ time {
 	padding:             0pt 2.5pt;
 }
 
-#main > .tags {
+main > article > .tags {
 	display:             none;
 	padding:             0pt;
 	margin-top:          -10pt;
 	text-align:          right;
 }
 
-#main .tag {
+.tag {
 	color:               #000000;
 }
 
@@ -494,15 +495,15 @@ header, aside , body > footer, footer nav {
 	display:             none;
 }
 
-#main {
+main {
 	margin:              50pt;
 }
 
-#main table {
+main table {
 	border-collapse:     collapse;
 }
 
-#main td {
+main td {
 	margin:              0pt;
 	border:              1pt solid #c0c0c0;
 }
@@ -537,43 +538,43 @@ body {
 	overflow-y:          scroll;
 }
 
-#main {
+main {
 	background:          #ffffff;
 	padding:             40pt 15pt 1pt 15pt;
 	margin:              0pt 100pt 0pt 100pt;
 	min-height:          calc(100vh - 41pt);
 }
 
-#main {
+main {
 	position:            relative;
 }
 
-#main h2:target, #main h3:target {
+article h2:target, article h3:target {
 	margin-top:          calc(0.83em - 55pt);
 	padding-top:         55pt;
 }
 
-#main h3:target {
+article h3:target {
 	margin-top:          calc(1em - 55pt);
 }
 
-#main pre, .details {
+article pre, .details {
 	background:          #f0f0f0;
 }
 
-#main table {
+article table {
 	background:          #e8e8e8;
 }
 
-#main td {
+article td {
 	background:          #ffffff;
 }
 
-#main table tr:nth-child(2n) td {
+article table tr:nth-child(2n) td {
 	background:          #f0f0f0;
 }
 
-#main img {
+article img {
 	max-height:          calc(100vh - 70pt);
 }
 
@@ -615,7 +616,7 @@ body {
 	display:             none;
 }
 
-#main {
+main {
 	margin:              0pt;
 	border:              0pt none;
 	background:          none;
@@ -634,7 +635,7 @@ time {
 	margin:              0pt 0pt 0pt -15pt;
 }
 
-#main > .tags {
+main > article > .tags {
 	display:             block;
 }
 
@@ -663,23 +664,22 @@ header a:first-child img {
 	vertical-align:      middle;
 }
 
-#main {
+main {
 	margin:              0pt;
 	padding:             0pt 15pt;
 	min-height:          0pt;
 }
 
-#main h2:target, #main h3:target {
+article h2:target, article h3:target {
 	margin-top:          calc(0.83em - 15pt);
 	padding-top:         15pt;
 }
 
-#main h3:target {
+article h3:target {
 	margin-top:          calc(1em - 15pt);
 }
 
-
-#main img {
+article img {
 	max-height:          calc(100vh - 30pt);
 }
 

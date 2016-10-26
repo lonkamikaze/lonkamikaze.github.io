@@ -23,7 +23,7 @@
 			</a>
 		</nav>
 	</header>
-	<article id="main">
+	<main>
 		<aside id="left">
 {% include toc.html %}
 		</aside>
@@ -31,13 +31,15 @@
 {% include social.html %}
 {% include tags.html tags=page.tags %}
 		</aside>
-		<h1>
-			{% if page.date %}<time>{{ page.date | date: site.style.date }}</time>
-			{% endif %}{{ page.title }}
-		</h1>
+		<article>
+			<h1>
+				{% if page.date %}<time>{{ page.date | date: site.style.date }}</time>
+				{% endif %}{{ page.title }}
+			</h1>
 {% if page.update %}<time class="update">{{ page.update | date: "%F" }}</time>{% endif %}
 {% include tags.html tags=page.tags %}
 {{ content }}
+		</article>
 		<footer>
 			{% if page.author %}<span class="author">{{ page.author }}</span>
 			{% endif %}<nav>
@@ -46,7 +48,7 @@
 				</a>
 			</nav>
 		</footer>
-	</article>
+	</main>
 	<footer id="footer">
 		© {{ site.copy }}
 		<nav>
