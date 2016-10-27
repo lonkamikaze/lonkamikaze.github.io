@@ -19,7 +19,7 @@ header {
 	font-variant:        small-caps;
 	font-size:           14pt;
 	line-height:         40pt;
-	box-shadow:          0pt -3pt 5pt;
+	box-shadow:          0pt 0pt 3pt rgba(0,0,0,.5);
 	list-style-type:     none;
 	margin:              0pt;
 	text-align:          right;
