@@ -25,7 +25,7 @@ The tests are run on a Core2Duo throttled to 800MHz on FreeBSD 9 r254957
 [set of AWK scripts](https://github.com/lonkamikaze/hsk-libs/tree/master/scripts)
 dealing with processing or generating C-code.
 
-<style type="text/css">
+<style type="text/css" scoped>
 .nawk {
 	margin: 3pt;
 	background-color: #89abcd;

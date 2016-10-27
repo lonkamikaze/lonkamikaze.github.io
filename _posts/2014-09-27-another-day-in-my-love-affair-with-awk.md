@@ -30,7 +30,7 @@ affair with AWK for many years, which has spilled into this blog before:
   I stumbled over a bottleneck in the one-true-AWK, default for \*BSD
   and Mac OS-X
 
-<style type="text/css">
+<style type="text/css" scoped>
 .nawk {
     margin: 3pt;
     background-color: #89abcd;

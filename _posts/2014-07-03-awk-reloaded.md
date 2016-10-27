@@ -19,7 +19,7 @@ Recently I developed a run time interpreter for the
 program it interprets are confidential, unfortunately. But the results
 are interesting nonetheless.
 
-<style type="text/css">
+<style type="text/css" scoped>
 .nawk {
     margin: 3pt;
     background-color: #89abcd;
