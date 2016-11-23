@@ -152,20 +152,6 @@ article > h2 {
 	counter-reset:       subsection;
 }
 
-article > h2::after {
-	counter-increment:   section;
-	content:             counter(section) ".";
-	float:               left;
-	margin-right:        .5ex;
-}
-
-article > h3::after {
-	counter-increment:   subsection;
-	content:             counter(section) "." counter(subsection) ".";
-	float:               left;
-	margin-right:        .5ex;
-}
-
 article blockquote {
 	font-style:          italic;
 }
@@ -497,13 +483,18 @@ main {
 	margin:              50pt;
 }
 
-main table {
+article table {
 	border-collapse:     collapse;
 }
 
-main td {
+article td {
 	margin:              0pt;
 	border:              1pt solid #c0c0c0;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6,
+article p, article td, article li {
+	page-break-inside:   avoid;
 }
 
 time, .note, .note h4 {
@@ -517,6 +508,18 @@ time, .note, .note h4 {
 .note h4 {
 	border-top:          0pt none;
 	border-left:         0pt none;
+}
+
+article > h2::before {
+	counter-increment:   section;
+	content:             counter(section) ".";
+	margin-right:        .5ex;
+}
+
+article > h3::before {
+	counter-increment:   subsection;
+	content:             counter(section) "." counter(subsection) ".";
+	margin-right:        .5ex;
 }
 
 /* syntax hilghighting { */
@@ -538,7 +541,7 @@ body {
 
 main {
 	background:          #ffffff;
-	padding:             40pt 15pt 1pt 15pt;
+	padding:             40pt 15pt 0pt 15pt;
 	margin:              0pt 100pt 0pt 100pt;
 	min-height:          calc(100vh - 41pt);
 }
@@ -549,6 +552,20 @@ main {
 	margin-top:          -50pt;
 	height:              50pt;
 	content:             "";
+}
+
+article > h2::after {
+	counter-increment:   section;
+	content:             counter(section) ".";
+	float:               left;
+	margin-right:        .5ex;
+}
+
+article > h3::after {
+	counter-increment:   subsection;
+	content:             counter(section) "." counter(subsection) ".";
+	float:               left;
+	margin-right:        .5ex;
 }
 
 article pre, .details {
