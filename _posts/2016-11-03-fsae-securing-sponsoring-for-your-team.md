@@ -42,7 +42,7 @@ here is our list:
 The sponsoring wall is a large stand-up display with logos from all
 sponsors. One of our old cars is rigged up as a racing sim controller
 so you put a computer and large monitor in front of it and people
-can play a racing sim from inside a real race care - a crowd favourite.
+can play a racing sim from inside a real race car - a crowd favourite.
 
 The racing simulator makes it easy to attract attention at public
 appearances and is one of the main reasons sponsors want the team
@@ -96,7 +96,7 @@ To this day the team uses Infineon µCs and Power MOSFETs.
 #### When to Loose a Sponsor
 
 Some sponsors are really great to work with, others are somewhat of
-a hazzle. Our PCB sponsor, dating back to 2009 (AFAIK) was one of
+a hassle. Our PCB sponsor, dating back to 2009 (AFAIK) was one of
 the latter.
 
 For 2012 we wanted to build a lot more electronics than in previous
