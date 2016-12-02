@@ -140,10 +140,6 @@ main > aside h1 {
 	padding:             0pt 5pt;
 }
 
-main {
-	font-family:         serif;
-}
-
 article > h1 {
 	counter-reset:       listing section table;
 }
@@ -691,3 +687,9 @@ article img {
 
 } /* @media screen and (max-width: 520pt) */
 
+/* default to sans-serif on low-dpi devices */
+@media all and (max-resolution: 240dpi) {
+body {
+	font-family:         sans-serif;
+}
+} /* @media all and (max-resolution: 240dpi) */
