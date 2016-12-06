@@ -9,19 +9,6 @@ article > * {
 article > :target {
 	display:             block;
 }
-
-ul {
-	list-style-type:     none;
-	padding:             0pt;
-}
-
-li a {
-	color:               #000000;
-}
-
-li a:hover {
-	color:               #e04000;
-}
 </style>
 {% for tag in site.tags %}
 <section id="tag-{{ tag[0] | escape }}">

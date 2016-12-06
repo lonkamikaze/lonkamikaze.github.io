@@ -444,6 +444,21 @@ main > article > .tags {
 
 /* } syntax highlighting */
 
+/* tags page { */
+section[id^=tag-] ul {
+	list-style-type:     none;
+	padding:             0pt;
+}
+
+section[id^=tag-] a {
+	color:               #000000;
+}
+
+section[id^=tag-] a:hover {
+	color:               #e04000;
+}
+/* } tags page */
+
 footer {
 	font-size:           80%;
 	background:          #ffffff;
