@@ -445,16 +445,16 @@ main > article > .tags {
 /* } syntax highlighting */
 
 /* tags page { */
-section[id^=tag-] ul {
+section[id^=tag\:] ul {
 	list-style-type:     none;
 	padding:             0pt;
 }
 
-section[id^=tag-] a {
+section[id^=tag\:] a {
 	color:               #000000;
 }
 
-section[id^=tag-] a:hover {
+section[id^=tag\:] a:hover {
 	color:               #e04000;
 }
 /* } tags page */
