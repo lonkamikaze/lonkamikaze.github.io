@@ -180,7 +180,7 @@ A scoped style is a style definition that may appear outside of the
 document `<head>` (which is usually illegal, but accepted by all
 browsers). The scoped style can affect everything inside its parent
 node, as well as the parent node itself, but nothing beyond that.
-So it only affects its contect (remember our root node is an `<article>`).
+So it only affects its context (remember our root node is an `<article>`).
 
 The CSS3 `:target` selector selects the element of the document that
 was selected by the `#fraction` of the given URL. Put the following
