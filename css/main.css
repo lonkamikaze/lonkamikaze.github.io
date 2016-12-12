@@ -23,6 +23,7 @@ header {
 	list-style-type:     none;
 	margin:              0pt;
 	text-align:          right;
+	border-bottom:       solid 3pt #606060;
 }
 
 header a:first-child {
@@ -106,7 +107,7 @@ main > aside h1 {
 	background:          #ffffff;
 	margin:              0pt -5pt;
 	overflow-y:          auto;
-	max-height:          calc(100vh - 50pt - 2.17em);
+	max-height:          calc(100vh - 55pt - 2.17em);
 	counter-reset:       left-ol-item;
 }
 
@@ -476,7 +477,8 @@ footer {
 }
 
 body > footer {
-	border-top:          solid 1pt #c0c0c0;
+	border-top:          solid 2.5pt #606060;
+	height:              42.5pt;
 	margin:              0pt 100pt;
 	padding:             0pt 15pt;
 }
@@ -557,22 +559,22 @@ article > h3::before {
 @media screen {
 
 body {
-	background:          #e0e0e0;
+	background:          #c0c0c0;
 	overflow-y:          scroll;
 }
 
 main {
 	background:          #ffffff;
-	padding:             40pt 15pt 0pt 15pt;
+	padding:             43pt 15pt 0pt 15pt;
 	margin:              0pt 100pt 0pt 100pt;
-	min-height:          calc(100vh - 41pt);
+	min-height:          calc(100vh - 42.5pt);
 }
 
 :target::before {
 	display:             block;
 	position:            relative;
-	margin-top:          -50pt;
-	height:              50pt;
+	margin-top:          -53pt;
+	height:              53pt;
 	content:             "";
 }
 
@@ -664,7 +666,6 @@ header {
 }
 
 body > footer {
-	border-top:          solid 1pt #c0c0c0;
 	margin:              0pt;
 }
 
