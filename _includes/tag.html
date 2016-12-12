@@ -1,1 +1,1 @@
-<a class="tag" href="/tags#tag:{{ include.tag | escape }}">{{ include.tag }}</a>
+<a class="tag" href="/tags#tag:{{ include.tag | replace: " ", "_" | url_encode }}">{{ include.tag | escape }}</a>

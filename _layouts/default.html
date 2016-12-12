@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ site.title }} · {{ page.title }}</title>
+	<title>{{ site.title | escape }} · {{ page.title | escape }}</title>
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 	<link rel="icon" type="image/x-icon" href="/favicon.ico">
 </head>
@@ -11,7 +11,7 @@
 	<header>
 		<nav>
 			<a href="/">
-				<img src="/img/logo.svg" alt="">{{ site.title }}
+				<img src="/img/logo.svg" alt="">{{ site.title | escape }}
 			</a><a href="/journal">
 				<img src="/img/feather.svg" alt="">journal
 			</a><a href="/about">
@@ -39,14 +39,14 @@
 		<article>
 			<h1>
 				{% if page.date %}<time>{{ page.date | date: site.style.date }}</time>
-				{% endif %}{{ page.title }}
+				{% endif %}{{ page.title | escape }}
 			</h1>
 {% if page.update %}<time class="update">{{ page.update | date: "%F" }}</time>{% endif %}
 {% include tags.html tags=page.tags %}
 {{ content }}
 		</article>
 		<footer>
-			{% if page.author %}<span class="author">{{ page.author }}</span>
+			{% if page.author %}<span class="author">{{ page.author | escape }}</span>
 			{% endif %}<nav>
 				<a href="{{ site.history }}/{{ page.path }}">
 					<img src="/img/history.svg" alt="">page history
@@ -55,7 +55,7 @@
 		</footer>
 	</main>
 	<footer id="footer">
-		© {{ site.copy }}
+		© {{ site.copy | escape }}
 		<nav>
 			<a href="/legal">
 				<img src="/img/legal.svg" alt="">legal (Impressum)
