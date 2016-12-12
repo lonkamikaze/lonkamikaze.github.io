@@ -457,11 +457,11 @@ section[id^=tag\:] ul {
 	padding:             0pt;
 }
 
-section[id^=tag\:] a {
+section[id^=tag\:] a:first-child {
 	color:               #000000;
 }
 
-section[id^=tag\:] a:hover {
+section[id^=tag\:] a:first-child:hover {
 	color:               #e04000;
 }
 /* } tags page */
@@ -613,7 +613,12 @@ time {
 }
 
 .tag {
-	background:          #a0f0a0;
+	background:          #50b050;
+	color:               #fff;
+}
+
+.tag:hover {
+	color:               #000;
 }
 
 .note {
