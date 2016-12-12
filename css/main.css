@@ -94,7 +94,7 @@ main > aside h1 {
 	left:                0pt;
 }
 
-#left ol {
+#left ol, #left ul {
 	font-size:           80%;
 	padding-left:        2.5em;
 }
@@ -103,7 +103,7 @@ main > aside h1 {
 	padding-left:        1.5em;
 }
 
-#left nav > ol {
+#left nav > ol, #left nav > ul {
 	background:          #ffffff;
 	margin:              0pt -5pt;
 	overflow-y:          auto;

@@ -1,0 +1,16 @@
+{% assign secs = content | split: '<section id="' %}
+{% for sec in secs offset: 1 %}
+{%	if forloop.first %}
+<h1>{{ page.title | escape }}</h1>
+<nav>
+	<ul>
+{%	endif %}
+{%	assign sec_id = sec | split: '">' %}
+{%	assign sec_name = sec | split: '</h1>' %}
+{%	assign sec_name = sec_name[0] | split: '<h1>' %}
+		<li><a href="#{{ sec_id[0] | url_encode | replace_first: "%3A", ":" }}">{{ sec_name[1] }}</a></li>
+{%	if forloop.last %}
+	</ul>
+</nav>
+{%	endif %}
+{% endfor %}

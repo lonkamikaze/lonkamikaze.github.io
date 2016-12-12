@@ -25,7 +25,12 @@
 	</header>
 	<main>
 		<aside id="left">
-{% include toc.html %}
+{% case page.toc %}
+{% when 'sections' %}
+{%	include sections.html %}
+{% else %}
+{%	include toc.html %}
+{% endcase %}
 		</aside>
 		<aside id="right">
 {% include social.html %}
