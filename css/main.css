@@ -501,6 +501,10 @@ main {
 	margin:              50pt;
 }
 
+main > article > .tags {
+	display:             inline;
+}
+
 article table {
 	border-collapse:     collapse;
 }
