@@ -186,12 +186,12 @@ article dt {
 }
 
 article a {
-	color:               #600000;
+	color:               #c00000;
 	text-decoration:     none;
 }
 
-article a:hover, .tag:hover {
-	color:               #e04000;
+a:hover {
+	text-shadow:         0pt 0pt .1ex;
 }
 
 article a[href*="://"]::after {
@@ -460,10 +460,6 @@ section[id^=tag\:] ul {
 
 section[id^=tag\:] a:first-child {
 	color:               #000000;
-}
-
-section[id^=tag\:] a:first-child:hover {
-	color:               #e04000;
 }
 /* } tags page */
 
