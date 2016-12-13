@@ -1,6 +1,7 @@
 ---
 title:   A Tags Page for Jekyll
 journal: 1
+update:  2016-12-13
 tags:
 - web-design
 - jekyll
@@ -98,11 +99,17 @@ later become the tag display page, in the case of this blog
 `tags/index.html` in the repository. The fraction `#tag:web-design`
 contains the tag. To avoid ambiguities the tag is prefixed by `tag:`.
 
-A list of tags can be generated like this:
+The target page needs to have an HTML element with the attribute
+`id="tag:web-design"` for the link to work. Valid ids may contain
+any non-whitespace character. To allow spaces in tags, spaces can
+be substituted by an underscore. URLs are less liberal about permitted
+characters, so tags in the URL should be URL encoded.
+
+E.g. a list of tags can be generated like this:
 
 ~~~ liquid
 {% raw %}{% for tag in post.tags %}
-	<a class="tag" href="/tags#tag:{{ tag | escape }}">{{ tag }}</a>
+	<a class="tag" href="/tags#tag:{{ tag | replace: " ", "_" | url_encode }}">{{ tag | escape }}</a>
 {% endfor %}{% endraw %}
 ~~~
 Creating a link for each tag.
@@ -156,8 +163,8 @@ This blog uses a section for each tag:
 
 ~~~ liquid
 {% raw %}{% for tag in site.tags %}
-<section id="tag:{{ tag[0] | escape }}">
-	<h1>{{ tag[0] }}</h1>
+<section id="tag:{{ tag[0] | replace: " ", "_" }}">
+	<h1>{{ tag[0] | escape }}</h1>
 	<ul>
 {%	for post in tag[1] %}
 		<li>…this is up to you…</li>
