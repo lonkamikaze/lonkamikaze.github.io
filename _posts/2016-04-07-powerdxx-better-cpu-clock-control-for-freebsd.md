@@ -10,7 +10,7 @@ tags:
 {% include man.md p="sysctl" s=3 %}
 {% include man.md p="cpufreq" s=4 %}
 Setting of P-States (power states a.k.a. steppings) on FreeBSD is
-managed by [powerd(8)]. It has been with us since 2005, a time when
+managed by [`powerd(8)`]. It has been with us since 2005, a time when
 the Pentium-M single-core architecture was the cutting edge choice
 for notebooks and dual-core just made its way to the desktop.
 
@@ -54,7 +54,7 @@ all the cases that need to be covered.
 
 Note that …
 
-- … the [sysctl(3)] interface flattens the architecture of the CPUs
+- … the [`sysctl(3)`] interface flattens the architecture of the CPUs
   into a list of pipelines, each presented as individual CPUs.
 - … `powerd` has the first CPU hard coded as the one controlling the
   clock frequency for all cores.
@@ -87,7 +87,7 @@ determined.
 During its initialisation phase `powerd++` assigns a frequency controlling
 core to each core, grouping them by the core that offers the handle
 to change the clock frequency. Unlike shown in the following illustration,
-all cores will always be controlled by `dev.cpu.0`, because the [cpufreq(4)]
+all cores will always be controlled by `dev.cpu.0`, because the [`cpufreq(4)`]
 driver only supports global P-State changes. But `powerd++` is built
 unaware of this limitation and will perform fine grained control the
 moment the driver offers it.
@@ -134,7 +134,7 @@ sensors that report 62°C, 74°C and 96°C, you want to adjust your coolant
 throughput to 96°C, not 232°C.
 
 I hope that `powerd++` will be widely used (within the community)
-and inspire the maintainers of [cpufreq(4)] to add support for per-CPU
+and inspire the maintainers of [`cpufreq(4)`] to add support for per-CPU
 frequency controls.
 
 TODOs

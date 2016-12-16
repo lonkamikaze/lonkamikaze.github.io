@@ -32,7 +32,7 @@ HowTo
 -----
 
 The first step is to create a named pipe. This can be done with the
-[mkfifo(1)] command:
+[`mkfifo(1)`] command:
 
 ~~~ sh
 # Get a temporary file name
@@ -154,7 +154,7 @@ The direction of communication can be reversed to use the pipe as
 a job queue for forked processes. Or a second pipe can be used to
 establish 2-way communications. With just two processes a single pipe
 might suffice for two way communications. A named pipe can be connected
-to an [ssh(1)] session or [nc(1)].
+to an [`ssh(1)`] session or [`nc(1)`].
 
 Basically named pipes are a way to establish a pipe to background
 processes or completely independent processes, which do not even have

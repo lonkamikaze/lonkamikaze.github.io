@@ -28,7 +28,7 @@ some basics as well as some advanced shell-scripting features.
 	</p>
 </div>
 
-To resolve the ambiguity with [watch(8)] I called it `observe` on
+To resolve the ambiguity with [`watch(8)`] I called it `observe` on
 my system. My `observe` command takes the time to wait between updates
 as the first argument. Successive arguments are interpreted as commands
 to run. The following listing is the complete code:
@@ -138,10 +138,10 @@ runcmd() {
 ~~~
 Execute the list of commands and carefully print the output.
 
-The [tput(1)] command is handy to directly *talk* to the terminal.
+The [`tput(1)`] command is handy to directly *talk* to the terminal.
 What it can do depends on the terminal it is run in, so it is good
 practice to test it in as many terminals as possible. A list of available
-commands is provided by the [terminfo(5)] manual page. The following
+commands is provided by the [`terminfo(5)`] manual page. The following
 commands were used here:
 
 `cm`

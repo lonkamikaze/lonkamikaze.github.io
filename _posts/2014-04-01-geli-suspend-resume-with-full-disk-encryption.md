@@ -16,6 +16,7 @@ system.
 {% include man.md p="init" s=8 %}
 {% include man.md p="nullfs" s=5 %}
 {% include man.md p="tmpfs" s=5 %}
+{% include man.md p="ldd" s=1 %}
 
 <div class="note">
 	<h4>Note</h4>
@@ -43,7 +44,7 @@ everything open permanently and suspend the laptop for transport or
 extended non-use. So the problem is quite severe.
 
 Luckily the [FreeBSD](https://www.freebsd.org/) encryption solution
-[geli(8)] provides a mechanism called `geli suspend` that deletes
+[`geli(8)`] provides a mechanism called `geli suspend` that deletes
 the key from memory and stalls all processes trying to access the
 file system.  Unfortunately `geli resume` would be one such process.
 
@@ -60,7 +61,7 @@ its modules is not encrypted. It resides in the device `ada0p2` labelled
 easy maintenance and use the `6boot:/boot` directory is mounted into
 `6root.eli:/boot` (the `.eli` marks an attached encrypted device).
 Because `/boot` is a subdirectory in the `6boot` file system, a
-[nullfs(5)] mount is required to access `6boot:/boot` and mount it
+[`nullfs(5)`] mount is required to access `6boot:/boot` and mount it
 into `6root:/boot`. To access `6boot:/boot`, `6boot` is mounted into
 `/mnt/boot`.
 
@@ -109,7 +110,7 @@ To implement this several challenges need to be faced:
 | Challenge                                                          | Approach                                                         |
 |--------------------------------------------------------------------|------------------------------------------------------------------|
 | Programming                                                        | Shell-scripting                                                  |
-| Technology, avoiding file system access                            | Use [tmpfs(5)]                                                   |
+| Technology, avoiding file system access                            | Use [`tmpfs(5)`]                                                 |
 | Usability, how to enter passphrases                                | Use a system console                                             |
 | Safety, the solution needs to be running before a suspend          | Use an always on, unauthenticated console                        |
 | Security, an unauthenticated interactive service is prone to abuse | Only allow password entry, no other kinds of interactive control |
@@ -189,7 +190,7 @@ and dynamically linked (see the `dyn` read-only).
 
 The static binaries can simply be copied into the `tmpfs`, the dynamically
 linked ones also require libraries, a list of which is provided by
-[ldd(1)](https://www.freebsd.org/cgi/man.cgi?query=ldd&manpath=FreeBSD+10.0-RELEASE).
+[`ldd(1)`].
 
 Note the use of `IFS` (Input Field Separator) to split variables into
 multiple arguments and how subprocesses are used to limit the scope
@@ -285,7 +286,7 @@ The System Console
 
 Because the script does not take care of grabbing the right console,
 it cannot simply be run from `/etc/ttys`. Instead it needs to be started
-by [getty(8)]. To do this a new entry into `/etc/gettytab` is required:
+by [`getty(8)`]. To do this a new entry into `/etc/gettytab` is required:
 
 ~~~ conf
 #
@@ -299,7 +300,7 @@ Define the `geliconsole` terminal.
 The entry defines a new terminal type called `geliconsole` with auto
 login.
 
-The new *terminal* can now be started by the [init(8)] process by
+The new *terminal* can now be started by the [`init(8)`] process by
 adding the following line to `/etc/ttys`:
 
 ~~~ conf

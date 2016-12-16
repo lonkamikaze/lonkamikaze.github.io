@@ -25,7 +25,7 @@ read the manual page:
 ~~~ sh
 man ./loadrec.1 | less -r
 ~~~
-Open the [loadrec(1)] manual from the repository snapshot.
+Open the [`loadrec(1)`] manual from the repository snapshot.
 
 You can run it right out of the build directory.
 
