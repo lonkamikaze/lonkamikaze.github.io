@@ -6,6 +6,7 @@ tags:
 - FreeBSD
 - shell-scripting
 - geli
+- tutorial
 ---
 This article details my solution of the `geli resume` deadlock. It
 is the result of much fiddling and locking myself out of the file

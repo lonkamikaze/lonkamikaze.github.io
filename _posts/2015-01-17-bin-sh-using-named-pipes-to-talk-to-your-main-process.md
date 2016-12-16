@@ -3,6 +3,7 @@ title: "/bin/sh: Using Named Pipes to Talk to Your Main Process"
 journal: 1
 tags:
 - shell-scripting
+- tutorial
 ---
 
 You want to fork off a couple of subshells and have them talk back

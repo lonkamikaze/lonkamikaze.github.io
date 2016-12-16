@@ -6,6 +6,7 @@ tags:
 - web-design
 - jekyll
 - liquid
+- tutorial
 ---
 
 [jekyll]: https://jekyllrb.com/

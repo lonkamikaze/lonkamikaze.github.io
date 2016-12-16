@@ -5,6 +5,7 @@ update: 2016-07-20
 tags:
 - shell-scripting
 - FreeBSD
+- tutorial
 ---
 
 The command `watch` in FreeBSD has a completely different function
