@@ -149,7 +149,7 @@ cheaper than calling `snprintf()` twice (please send me your benchmarks).
 
 Creating a buffer on the stack is fairly cheap, after all only the
 used portion goes into the CPU cache. The only expected cost is that
-`snprintf()` probably ends up on a different cache page.
+`snprintf()` probably ends up on a different cache line.
 
 Using [`std::string`] is a pretty obvious choice, because it comes
 with a constructor that copies a given amount of data from a buffer.
@@ -214,7 +214,7 @@ The final `operator ()` implementation looks like this:
 template <typename... ArgTs>
 std::string operator ()(ArgTs const &... args) const {
 	char buf[BufSize];
-	auto size = sprintf(buf, this->fmt, args...);
+	auto size = snprintf(buf, BufSize, this->fmt, args...);
 	if (size >= BufSize) {
 		/* does not fit into buffer */
 		return {buf, BufSize - 1};
