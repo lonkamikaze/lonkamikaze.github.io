@@ -14,6 +14,7 @@ tag:
 {% include hpp.md h="string" %}
 {% include hpp.md h="cstdio" %}
 {% include hpp.md h="iostream" %}
+{% include hpp.md h="memory" %}
 [operator overloading]:  http://en.cppreference.com/w/cpp/language/operators
 [variadic templates]:    http://en.cppreference.com/w/cpp/language/parameter_pack
 [type aliases]:          http://en.cppreference.com/w/cpp/language/type_alias
@@ -238,9 +239,18 @@ The operator completes the `Formatter` class/template.
 Note the different handling of the error cases. The appropriate handling
 of errors may well depend on the usage scenario and the confidence
 of not triggering an error. In a library for 3rd party use it's probably
-a good idea to throw exceptions in the error cases. This version was
-picked because it generates less code than the asserts, but at least
-nothing illegal/undefined happens.
+a good idea to throw an exception in the `size < 0` case.
+
+In the `size >= BufSize` case it is possible to fall back to a buffer
+on the free-store (C++ jargon for the heap). E.g.:
+
+~~~ cpp
+/* does not fit into buffer */
+std::unique_ptr<char[]> bigbuf{new char[size + 1]};
+snprintf(bigbuf.get(), size + 1, this->fmt, args...);
+return {bigbuf.get(), static_cast<size_t>(size)};
+~~~
+Fallback for insufficient buffer sizes, requires [`<memory>`].
 
 At this point it is possible to use the formatter:
 
@@ -313,7 +323,7 @@ References
 - [`snprintf(3)`]
 - [`std::string`], [`std::ostringstream`]
 - [`std::unique_ptr`], [`std::move`]
-- [`<string>`], [`<iostream>`], [`<cstdio>`]
+- [`<string>`], [`<iostream>`], [`<cstdio>`], [`<memory>`]
 - [operator overloading], [variadic templates], [type aliases], [user-defined literals]
 
 TL;DR
