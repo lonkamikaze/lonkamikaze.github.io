@@ -14,6 +14,10 @@ tag:
 {% include hpp.md h="string" %}
 {% include hpp.md h="cstdio" %}
 {% include hpp.md h="iostream" %}
+[operator overloading]:  http://en.cppreference.com/w/cpp/language/operators
+[variadic templates]:    http://en.cppreference.com/w/cpp/language/parameter_pack
+[type aliases]:          http://en.cppreference.com/w/cpp/language/type_alias
+[user-defined literals]: http://en.cppreference.com/w/cpp/language/user_literal
 The native way of formatting an [`std::string`] using the C++ standard
 library is creating an [`std::ostringstream`] and streaming the formatting
 flags and data into it. This can lead to surprisingly elegant solutions,
@@ -162,6 +166,9 @@ explicitly.
 The Operator
 ------------
 
+For this section you should be familiar with [operator overloading]
+and [variadic templates].
+
 One option to provide the `snprintf()` functionality would be to
 provide a method for doing that. But the final usage scenario lends
 itself to using an operator. Because of the need to provide an arbitrary
@@ -184,7 +191,7 @@ and moving the string (the string can be created in place).
 
 Because what constitutes a sufficiently large buffer may change from
 use case to use case, the buffer size should become a template argument
-to the `Formatter` class. This allows creating a bunch of type aliases
+to the `Formatter` class. This allows creating a bunch of [type aliases]
 for different scenarios:
 
 ~~~ c++
@@ -253,7 +260,7 @@ User-Defined Literals
 ---------------------
 
 One last step to turn the formatter into a first class feature is
-using user-defined literals instead of type aliases or typedefs:
+using [user-defined literals] instead of type aliases or typedefs:
 
 ~~~ cpp
 constexpr Formatter<16384> operator "" _fmt(char const * const fmt, size_t const) {
@@ -307,6 +314,7 @@ References
 - [`std::string`], [`std::ostringstream`]
 - [`std::unique_ptr`], [`std::move`]
 - [`<string>`], [`<iostream>`], [`<cstdio>`]
+- [operator overloading], [variadic templates], [type aliases], [user-defined literals]
 
 TL;DR
 -----
