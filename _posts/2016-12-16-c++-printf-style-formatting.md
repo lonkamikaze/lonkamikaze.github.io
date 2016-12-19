@@ -215,12 +215,12 @@ template <typename... ArgTs>
 std::string operator ()(ArgTs const &... args) const {
 	char buf[BufSize];
 	auto size = snprintf(buf, BufSize, this->fmt, args...);
-	if (size >= BufSize) {
-		/* does not fit into buffer */
-		return {buf, BufSize - 1};
-	} else if (size < 0) {
+	if (size < 0) {
 		/* encoding error */
 		return {};
+	} else if (static_cast<size_t>(size) >= BufSize) {
+		/* does not fit into buffer */
+		return {buf, BufSize - 1};
 	}
 	return {buf, static_cast<size_t>(size)};
 }
