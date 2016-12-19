@@ -1,0 +1,46 @@
+main {
+	margin:              50pt;
+}
+
+article td {
+	margin:              0pt;
+	border:              1pt solid #c0c0c0;
+}
+
+article h1, article h2, article h3, article h4, article h5, article h6,
+article p, article td, article li {
+	page-break-inside:   avoid;
+}
+
+time, .note, .note h4 {
+	border:              1pt solid #c0c0c0;
+}
+
+.update {
+	border:              0pt none;
+}
+
+.note h4 {
+	border-top:          0pt none;
+	border-left:         0pt none;
+}
+
+article > h2::before {
+	counter-increment:   section;
+	content:             counter(section) ".";
+	margin-right:        .5ex;
+}
+
+article > h3::before {
+	counter-increment:   subsection;
+	content:             counter(section) "." counter(subsection) ".";
+	margin-right:        .5ex;
+}
+
+/* syntax hilghighting { */
+.highlight .err { background: none; outline: #e3d2d2 solid 2pt; } /* Error */
+.highlight .gd { background: none; outline: #ffdddd solid 2pt; } /* Generic.Deleted */
+.highlight .gd .x { background: none; outline: #ffaaaa solid 2pt; } /* Generic.Deleted.Specific */
+.highlight .gi { background: none; outline: #ddffdd solid 2pt; } /* Generic.Inserted */
+.highlight .gi .x { background: none; outline: #aaffaa solid 2pt; } /* Generic.Inserted.Specific */
+/* } syntax hilghighting */

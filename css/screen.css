@@ -1,0 +1,281 @@
+body {
+	overflow-y:          scroll;
+}
+
+header, body > footer, footer nav {
+	display:             block;
+}
+
+main {
+	padding:             0pt 15pt;
+}
+
+header {
+	margin:              0pt;
+	padding:             0pt;
+	font-family:         sans-serif;
+	font-variant:        small-caps;
+	font-size:           14pt;
+	line-height:         24pt;
+	box-shadow:          0pt 0pt 3pt rgba(0,0,0,.5);
+	border-bottom:       solid 3pt #606060;
+}
+
+header a, footer a {
+	text-decoration:     none;
+	color:               #808080;
+	white-space:         nowrap;
+	display:             inline-block;
+}
+
+header nav {
+	padding:             0pt 0pt 0pt 15pt;
+}
+
+header nav a {
+	padding:             0pt 15pt 0pt 0pt;
+}
+
+header a:hover, footer a:hover {
+	color:               #404040;
+}
+
+header a img {
+	width:               24pt;
+	height:              24pt;
+}
+
+header a img, footer a img {
+	display:             inline-block;
+	vertical-align:      middle;
+	opacity:             .666;
+	margin:              0pt;
+	padding:             0pt;
+	border:              0pt none;
+}
+
+header a:hover img, footer a:hover img {
+	opacity:             1;
+}
+
+header a:first-child img {
+	opacity:             1;
+}
+
+footer nav {
+	float:               right;
+}
+
+footer nav a {
+	padding:             0pt 0pt 0pt 15pt;
+}
+
+body > footer {
+	padding:             0pt 15pt;
+	border-top:          solid 2pt #606060;
+}
+
+article pre, .details {
+	background:          #f0f0f0;
+}
+
+article table {
+	background:          #e8e8e8;
+}
+
+article td {
+	background:          #ffffff;
+}
+
+article table tr:nth-child(2n) td {
+	background:          #f0f0f0;
+}
+
+time {
+	position:            relative;
+	background:          #d0d0d0;
+	margin:              0pt 0pt 0pt -15pt;
+}
+
+.tag {
+	background:          #50b050;
+	color:               #fff;
+}
+
+.tag:hover {
+	color:               #000;
+}
+
+.note {
+	background:          #f0f0f0;
+}
+
+.note h4 {
+	background:          #a0c0e0;
+}
+
+.warn h4 {
+	background:          #e0c0a0;
+}
+
+@media screen and (min-width: 520pt) {
+
+header {
+	position:            fixed;
+	width:               100%;
+	top:                 0pt;
+	background:          #fff;
+	z-index:             1;
+	line-height:         40pt;
+	text-align:          right;
+}
+
+header a:first-child {
+	float:               left;
+}
+
+header a:first-child img {
+	width:               40pt;
+	height:              40pt;
+}
+
+main {
+	padding:             43pt 15pt 1pt 15pt;
+	min-height:          calc(100vh - 32pt);
+}
+
+footer {
+	line-height:         30pt;
+}
+
+:target::before {
+	display:             block;
+	position:            relative;
+	margin-top:          -53pt;
+	height:              53pt;
+	content:             "";
+}
+
+article > h2:target::after {
+	content:             counter(section) ".";
+	margin-right:        .5ex;
+	float:               left;
+}
+
+article > h3:target::after {
+	content:             counter(section) "." counter(subsection) ".";
+	margin-right:        .5ex;
+	float:               left;
+}
+
+article img {
+	max-height:          calc(100vh - 30pt - 32pt);
+}
+
+} /* @media screen and (min-width: 520pt) */
+
+@media screen and (min-width: 720pt) {
+
+body {
+	background:          #c0c0c0;
+}
+
+header {
+	padding:             0pt 100pt;
+}
+
+main, body > footer {
+	background:          #fff;
+	margin:              0pt 100pt;
+}
+
+main > aside {
+	display:             block;
+}
+
+main > footer::after {
+	content:             "\000a0";
+}
+
+main > aside {
+	position:            fixed;
+	width:               100pt;
+	padding:             0pt 5pt;
+	font-size:           10pt;
+}
+
+main > aside a {
+	display:             block;
+	text-decoration:     none;
+	color:               #404040;
+}
+
+main > aside a:hover {
+	color:               #000000;
+}
+
+main > aside h1 {
+	margin:              15pt 0pt 0pt 0pt;
+	font-size:           100%;
+}
+
+#left {
+	left:                0pt;
+}
+
+#left ol, #left ul {
+	font-size:           80%;
+	padding-left:        2.5em;
+}
+
+#left ol ol {
+	padding-left:        1.5em;
+}
+
+#left nav > ol, #left nav > ul {
+	background:          #ffffff;
+	margin:              0pt -5pt;
+	overflow-y:          auto;
+	max-height:          calc(100vh - 53pt - 2.17em);
+	counter-reset:       left-ol-item;
+}
+
+#left nav > ol > li:first-child, #left nav > ol > li:last-child {
+	list-style-type:     none;
+}
+
+#right {
+	right:               0pt;
+}
+
+#right nav {
+	background:          #ffffff;
+	border-radius:       0pt 5pt 5pt 0pt;
+	padding:             5pt;
+	margin:              0pt 0pt 0pt -5pt;
+}
+
+#right .tags {
+	border:              0pt none;
+	padding:             0pt;
+	margin:              0pt 0pt 0pt -5pt;
+	background:          none;
+}
+
+#right .tags a {
+	margin:              5pt 0pt;
+	display:             table;
+	border-radius:       0pt 2.5pt 2.5pt 0pt;
+	border-left:         0pt none;
+	padding:             0pt 5pt;
+}
+
+main > article > .tags {
+	display:             none;
+}
+
+time {
+	margin:              0pt 0pt 0pt -20pt;
+}
+
+} /* @media screen and (min-width: 720pt) */
