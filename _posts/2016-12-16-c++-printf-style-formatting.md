@@ -25,7 +25,8 @@ that looks and feels like proper C++.
 The includes used in the following listings are [`<string>`], [`<cstdio>`]
 and [`<iostream>`]. Some more if the code that does not end up in
 the final solution is taken into account. The includes are not shown
-in the code listings.
+in the code listings. But copy and paste ready code can be found
+in the [TL;DR](#tldr) section of this article.
 
 Approach
 --------
@@ -306,3 +307,56 @@ References
 - [`std::string`], [`std::ostringstream`]
 - [`std::unique_ptr`], [`std::move`]
 - [`<string>`], [`<iostream>`], [`<cstdio>`]
+
+TL;DR
+-----
+
+~~~ c++
+#include <string>
+#include <cstdio>
+
+template <size_t BufSize>
+class Formatter {
+	private:
+	char const * const fmt;
+	public:
+	constexpr Formatter(char const * const fmt) : fmt{fmt} {}
+
+	template <typename... ArgTs>
+	std::string operator ()(ArgTs const &... args) const {
+		char buf[BufSize];
+		auto size = snprintf(buf, BufSize, this->fmt, args...);
+		if (size < 0) {
+			/* encoding error */
+			return {};
+		} else if (static_cast<size_t>(size) >= BufSize) {
+			/* does not fit into buffer */
+			return {buf, BufSize - 1};
+		}
+		return {buf, static_cast<size_t>(size)};
+	}
+};
+
+constexpr Formatter<16384> operator "" _fmt(char const * const fmt, size_t const) {
+	return {fmt};
+}
+~~~
+The formatter.
+
+~~~ c++
+#include <iostream>
+
+int main() {
+	std::cout << "Knights Radiant:\n"
+	             "|    ID | Name       | Order      |\n"
+	             "|-------|------------|------------|\n"
+	             "| %5d | %-10.10s | %-10.10s |\n"
+	             "| %5d | %-10.10s | %-10.10s |\n"
+	             "| %5d | %-10.10s | %-10.10s |\n"_fmt
+	             (1, "Kaladin", "Windrunner",
+	              2, "Shallan", "Lightweaver",
+	              3, "Dalinar", "");
+	return 0;
+}
+~~~
+Usage example.
