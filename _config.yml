@@ -1,8 +1,12 @@
 title:   Kami's Braindump
 copy:    2013 - 2016 Dominic Fandrey
-url:     https://lonkamikaze.github.io
 history: https://github.com/lonkamikaze/lonkamikaze.github.io/commits/master
 code:    https://github.com/lonkamikaze/lonkamikaze.github.io/blob/master
+safe:    true
+gems:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
 style:
   date: "%F"
 defaults:

@@ -7,7 +7,7 @@ tags:
 
 [randomascii]: https://randomascii.wordpress.com
 [strncpy]:     https://randomascii.wordpress.com/2013/04/03/stop-using-strncpy-already/
-[formatting]:  {% post_url 2016-12-16-c++-printf-style-formatting %}
+[formatting]:  {% post_url 2016-12-16-cxx-printf-style-formatting %}
 {% include man.md p="sprintf" s=3 %}
 {% include man.md p="snprintf" s=3 %}
 This post is about why you should read [Bruce Dawson's blog][randomascii],

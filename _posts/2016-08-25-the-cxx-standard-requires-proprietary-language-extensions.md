@@ -1,6 +1,8 @@
 ---
 title: The C++ Standard Requires Proprietary Language Extensions
 journal: 1
+redirect_from:
+- 2016/08/25/the-c++-standard-requires-proprietary-language-extensions
 tag:
 - C++
 ---

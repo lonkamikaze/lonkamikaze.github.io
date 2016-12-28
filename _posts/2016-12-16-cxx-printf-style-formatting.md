@@ -1,6 +1,8 @@
 ---
 title:   "C++: printf Style Formatting"
 journal: 1
+redirect_from:
+- 2016/12/16/c++-printf-style-formatting
 update:  2016-12-19
 tag:
 - C++
