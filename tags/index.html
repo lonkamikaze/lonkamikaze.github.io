@@ -11,11 +11,13 @@ article > :target {
 	display:             block;
 }
 </style>
-{% for tag in site.tags %}
-<section id="tag:{{ tag[0] | replace: " ", "_" }}">
-	<h1>{{ tag[0] | escape }}</h1>
+{% capture tags %}{% for tag in site.tags %}{{ tag[0] }}¶{% endfor %}{% endcapture %}
+{% assign tags = tags | strip | split: "¶" | sort | sort_natural %}
+{% for tag in tags %}
+<section id="tag:{{ tag | replace: " ", "_" }}">
+	<h1>{{ tag | escape }}</h1>
 	<ul>
-{%	for post in tag[1] %}
+{%	for post in site.tags[tag] %}
 		<li>
 			<a href="{{ post.id }}">
 				<time>{{ post.date | date: site.style.date }}</time>
