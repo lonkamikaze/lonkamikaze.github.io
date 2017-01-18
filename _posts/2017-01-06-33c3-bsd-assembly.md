@@ -51,7 +51,7 @@ powerd++ Bug
 The bug only occurs on FreeBSD 12-CURRENT and as far as we could tell
 with truss and dtrace, signals sent to a process compiled with a
 C++ compiler get lost. This affects custom signal handlers like in
-the `powerd++` binary as well as well as the default signal handlers
+the `powerd++` binary as well as the default signal handlers
 used by the `loadrec` binary. The bug shows itself by the processes
 not terminating upon reception of `SIGHUP`, `SIGINT` and `SIGTERM`.
 
