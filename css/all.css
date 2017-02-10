@@ -66,13 +66,14 @@ article pre {
 	padding-left:        5pt;
 }
 
-article pre + p, .highlighter-rouge + p, article table + p, article iframe + p {
+article > pre + p, article > .highlighter-rouge + p,
+article > table + p, article > iframe + p {
 	text-align:          center;
 	margin-top:          -10pt;
 	font-size:           80%;
 }
 
-article pre + p::before, .highlighter-rouge + p::before {
+article > pre + p::before, article > .highlighter-rouge + p::before {
 	content:             "Listing " counter(listing) ": ";
 }
 
@@ -110,7 +111,7 @@ article td {
 	margin:              1pt;
 }
 
-article table + p::before {
+article > table + p::before {
 	content:             "Table " counter(table) ": ";
 }
 
