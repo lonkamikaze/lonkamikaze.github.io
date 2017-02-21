@@ -1,6 +1,6 @@
 ---
 title: geli suspend/resume with Full Disk Encryption
-update: 2016-07-13
+update: 2017-02-21
 journal: 1
 tags:
 - FreeBSD
@@ -262,9 +262,9 @@ while read -r subsystem < "${gcdir}/suspend.fifo"; do
 	echo "geliconsole: Suspend"
 	"${gcdir}/geli" suspend -a
 	if [ $subsystem = "apm" ]; then
-		"${gcdir}/apm" -z &
+		"${gcdir}/apm" -z
 	else
-		"${gcdir}/acpiconf" -k 0 &
+		"${gcdir}/acpiconf" -k 0
 	fi
 	# Resume
 	while have_suspended_geoms; do
@@ -360,8 +360,9 @@ In order for the VT-switch to work without flaw, the automatic VT
 switch to console 0 needs to be turned off:
 
 ~~~ sh
-sysctl hw.syscons.sc_no_suspend_vtswitch=1
+sysctl hw.syscons.sc_no_suspend_vtswitch=1 kern.vt.suspendswitch=0
 echo hw.syscons.sc_no_suspend_vtswitch=1 >> /etc/sysctl.conf
+echo kern.vt.suspendswitch=0 >> /etc/sysctl.conf
 ~~~
 Permanently prevent automatic VT switch.
 
@@ -442,9 +443,9 @@ while read -r subsystem < "${gcdir}/suspend.fifo"; do
 	echo "geliconsole: Suspend"
 	"${gcdir}/geli" suspend -a
 	if [ $subsystem = "apm" ]; then
-		"${gcdir}/apm" -z &
+		"${gcdir}/apm" -z
 	else
-		"${gcdir}/acpiconf" -k 0 &
+		"${gcdir}/acpiconf" -k 0
 	fi
 	# Resume
 	while have_suspended_geoms; do
