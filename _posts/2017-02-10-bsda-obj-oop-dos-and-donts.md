@@ -138,7 +138,7 @@ E.g. consider a class, which opens a new file descriptor and closes
 it in its cleanup method (a cleanup method is a non-default destructor).
 
 Create a copy of an instance and the original as well as the copy
-will initially continue work. However if either one is deleted it
+will initially continue to work. However if either one is deleted it
 will close the file descriptor still in use by the other instance.
 
 Or imagine you serialise an instance of a class that creates a temporary
