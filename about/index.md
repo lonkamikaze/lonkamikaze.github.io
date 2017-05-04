@@ -18,9 +18,10 @@ and the [Chaos Communication Congress](https://events.ccc.de/congress/).
 
 I'm willing to travel to other hacker conferences, too.
 
-If you just want to stalk me online it is best to follow me on twitter,
-my accounts are [@lonkamikaze](https://twitter.com/lonkamikaze) and
-[@lonkamikaze_en](https://twitter.com/lonkamikaze_en). You can also
+If you just want to stalk me online it is best to follow me on mastodon
+([@kamikaze@chaos.social](https://chaos.social/@kamikaze)) or twitter
+([@lonkamikaze](https://twitter.com/lonkamikaze),
+[@lonkamikaze_en](https://twitter.com/lonkamikaze_en)). You can also
 follow me on [GitHub]({{ site.profile }}).
 
 ### FreeBSD
