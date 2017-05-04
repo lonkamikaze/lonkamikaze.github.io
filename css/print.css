@@ -13,6 +13,10 @@ article a[href*="://"]::after {
 	font-weight:         normal;
 }
 
+article pre {
+	padding:             0pt 5pt;
+}
+
 article td {
 	margin:              0pt;
 	border:              1pt solid #c0c0c0;

@@ -87,6 +87,11 @@ article a[href*="://"]::after {
 	letter-spacing:      -.5em;
 }
 
+article pre {
+	margin:              15pt -15pt 15pt -15pt;
+	padding:             0pt 15pt 0pt 14pt;
+}
+
 article pre, .details {
 	background:          #f0f0f0;
 }

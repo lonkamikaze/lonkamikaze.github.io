@@ -61,9 +61,8 @@ article pre {
 article pre {
 	white-space:         pre-wrap;
 	word-break:          break-all;
-	border-left:         1pt solid #c0c0c0;
-	margin:              15pt 0pt 15pt -5pt;
-	padding-left:        5pt;
+	border-radius:       5pt 0pt 0pt 5pt;
+	border-left:         1pt solid #808080;
 }
 
 article > pre + p, article > .highlighter-rouge + p,
