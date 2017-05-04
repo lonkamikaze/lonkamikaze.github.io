@@ -81,20 +81,8 @@ article dt {
 	font-weight:         bold;
 }
 
-article a {
-	color:               #c00000;
-	text-decoration:     none;
-}
-
 a:hover {
 	text-shadow:         0pt 0pt .1ex;
-}
-
-article a[href*="://"]::after {
-	content:             "□➟\02003";
-	vertical-align:      super;
-	font-size:           75%;
-	letter-spacing:      -.5em;
 }
 
 article > h1 a {

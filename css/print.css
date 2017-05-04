@@ -2,6 +2,17 @@ main {
 	margin:              50pt;
 }
 
+article a {
+	color:               #000;
+	text-decoration:     none;
+	font-weight:         bold;
+}
+
+article a[href*="://"]::after {
+	content:             " (" attr(href) ")";
+	font-weight:         normal;
+}
+
 article td {
 	margin:              0pt;
 	border:              1pt solid #c0c0c0;

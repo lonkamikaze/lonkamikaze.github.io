@@ -75,6 +75,18 @@ body > footer {
 	border-top:          solid 2pt #606060;
 }
 
+article a {
+	color:               #c00000;
+	text-decoration:     none;
+}
+
+article a[href*="://"]::after {
+	content:             "□➟\02003";
+	vertical-align:      super;
+	font-size:           75%;
+	letter-spacing:      -.5em;
+}
+
 article pre, .details {
 	background:          #f0f0f0;
 }
