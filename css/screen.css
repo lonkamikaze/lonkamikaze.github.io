@@ -1,4 +1,6 @@
 body {
+	margin:              0pt;
+	padding:             0pt;
 	overflow-y:          scroll;
 }
 
@@ -110,6 +112,7 @@ article table tr:nth-child(2n) td {
 
 time {
 	position:            relative;
+	border-radius:       0pt 2.5pt 0pt 2.5pt;
 	background:          #d0d0d0;
 	margin:              0pt 0pt 0pt -15pt;
 }

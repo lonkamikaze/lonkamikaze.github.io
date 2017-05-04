@@ -1,7 +1,3 @@
-main {
-	margin:              50pt;
-}
-
 article a {
 	color:               #000;
 	text-decoration:     none;
@@ -17,6 +13,10 @@ article pre {
 	padding:             0pt 5pt;
 }
 
+article table {
+	border:              1pt solid #c0c0c0;
+}
+
 article td {
 	margin:              0pt;
 	border:              1pt solid #c0c0c0;
@@ -27,7 +27,7 @@ article p, article td, article li {
 	page-break-inside:   avoid;
 }
 
-time, .note, .note h4 {
+.note, .note h4 {
 	border:              1pt solid #c0c0c0;
 }
 
