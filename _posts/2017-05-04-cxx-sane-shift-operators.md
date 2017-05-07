@@ -1,6 +1,7 @@
 ---
 title:   "C++: Sane Shift Operators"
 journal: 1
+update:  2017-05-07
 tag:
 - C++
 - tutorial
@@ -18,6 +19,19 @@ far, shifting by a negative number is implementation defined, which
 means the compiler cannot just pretend it didn't happen or format
 your hard drive, but you still don't have any guarantees about what
 exactly you get.
+
+<div class="note warn">
+	<h4>Warning</h4>
+	<p>
+	It has been brought to my attention on IRC (thank you Rotluchs),
+	that my code triggers undefined behaviour when the number
+	of bits to shift is -2<sup>n-1</sup> (n being the number of
+	bits of the integer type).
+	</p>
+	<p>
+	The code in this tutorial has been updated to avoid that case.
+	</p>
+</div>
 
 <div class="note">
 	<h4>Note</h4>
@@ -225,21 +239,21 @@ The cases to handle here are `bits < 0` and `bits >= bitsof<IntT>()`:
 
 ```c++
 constexpr IntT operator <<(int const bits) const {
+	if (bits >= bitsof<IntT>() || bits <= - bitsof<IntT>()) {
+		return 0;
+	}
 	if (bits < 0) {
 		return *this >> (- bits);
-	}
-	if (bits >= bitsof<IntT>()) {
-		return 0;
 	}
 	return static_cast<IntT>(this->value << bits);
 }
 
 constexpr IntT operator >>(int const bits) const {
+	if (bits >= bitsof<IntT>() || bits <= - bitsof<IntT>()) {
+		return 0;
+	}
 	if (bits < 0) {
 		return *this << (- bits);
-	}
-	if (bits >= bitsof<IntT>()) {
-		return 0;
 	}
 	return static_cast<IntT>(this->value >> bits);
 }
@@ -308,21 +322,21 @@ class shift_wrapper {
 	    value{static_cast<UIntT>(value)} {}
 
 	constexpr IntT operator <<(int const bits) const {
+		if (bits >= bitsof<IntT>() || bits <= - bitsof<IntT>()) {
+			return 0;
+		}
 		if (bits < 0) {
 			return *this >> (- bits);
-		}
-		if (bits >= bitsof<IntT>()) {
-			return 0;
 		}
 		return static_cast<IntT>(this->value << bits);
 	}
 
 	constexpr IntT operator >>(int const bits) const {
+		if (bits >= bitsof<IntT>() || bits <= - bitsof<IntT>()) {
+			return 0;
+		}
 		if (bits < 0) {
 			return *this << (- bits);
-		}
-		if (bits >= bitsof<IntT>()) {
-			return 0;
 		}
 		return static_cast<IntT>(this->value >> bits);
 	}
