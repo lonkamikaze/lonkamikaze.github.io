@@ -209,15 +209,12 @@ main, body > footer {
 	margin:              0pt 100pt;
 }
 
-main > aside {
-	display:             block;
-}
-
 main > footer::after {
 	content:             "\000a0";
 }
 
 main > aside {
+	display:             block;
 	position:            fixed;
 	width:               100pt;
 	padding:             0pt 5pt;
