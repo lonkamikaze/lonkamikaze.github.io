@@ -296,3 +296,23 @@ time {
 }
 
 } /* @media screen and (min-width: 720pt) */
+
+@media screen and (min-width: 820pt) {
+
+header {
+	padding:             0pt 150pt;
+}
+
+main, body > footer {
+	margin:              0pt 150pt;
+}
+
+main > aside {
+	width:               150pt;
+}
+
+#left ol, #left ul {
+	font-size:           90%;
+}
+
+} /* @media screen and (min-width: 820pt) */
