@@ -227,9 +227,6 @@ article > .tags + * {
 	font-variant:        small-caps;
 }
 
-.warn h4 {
-}
-
 .good {
 	color:               #008000;
 }
