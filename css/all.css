@@ -61,6 +61,7 @@ article pre {
 	word-break:          break-all;
 	border-radius:       5pt 0pt 0pt 5pt;
 	border-left:         1pt solid #808080;
+	border-right:        1pt solid #fff;
 }
 
 article > pre + p, article > .highlighter-rouge + p,
