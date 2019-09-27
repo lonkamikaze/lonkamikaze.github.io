@@ -254,11 +254,16 @@ main > aside h1 {
 	margin:              0pt -5pt;
 	overflow-y:          auto;
 	max-height:          calc(100vh - 53pt - 2.17em);
-	counter-reset:       left-ol-item;
 }
 
 #left nav > ol > li:first-child, #left nav > ol > li:last-child {
 	list-style-type:     none;
+	counter-reset:       section;
+}
+
+#left nav > ol > li {
+	counter-increment:   section;
+	content:             counter(section);
 }
 
 #right {
