@@ -4,7 +4,7 @@ profile: https://github.com/lonkamikaze
 history: https://github.com/lonkamikaze/lonkamikaze.github.io/commits/master
 code:    https://github.com/lonkamikaze/lonkamikaze.github.io/blob/master
 safe:    true
-gems:
+plugins:
   - jekyll-redirect-from
 whitelist:
   - jekyll-redirect-from
