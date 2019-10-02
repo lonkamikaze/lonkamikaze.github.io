@@ -17,8 +17,8 @@ header {
 	padding:             0pt;
 	font-family:         sans-serif;
 	font-variant:        small-caps;
-	font-size:           14pt;
-	line-height:         24pt;
+	font-size:           0;
+	line-height:         1;
 	box-shadow:          0pt 0pt 3pt rgba(0,0,0,.5);
 	border-bottom:       solid 3pt #606060;
 }
@@ -28,14 +28,6 @@ header a, footer a {
 	color:               #808080;
 	white-space:         nowrap;
 	display:             inline-block;
-}
-
-header nav {
-	padding:             0pt 0pt 0pt 15pt;
-}
-
-header nav a {
-	padding:             0pt 15pt 0pt 0pt;
 }
 
 header a:hover, footer a:hover {
@@ -138,7 +130,7 @@ time {
 	background:          #e0c0a0;
 }
 
-@media screen and (min-width: 520pt) {
+@media screen and (min-width: 120pt) {
 
 header {
 	position:            fixed;
@@ -146,7 +138,6 @@ header {
 	top:                 0pt;
 	background:          #fff;
 	z-index:             1;
-	line-height:         40pt;
 	text-align:          right;
 }
 
@@ -154,25 +145,15 @@ header a:first-child {
 	float:               left;
 }
 
-header a:first-child img {
-	width:               40pt;
-	height:              40pt;
-}
-
 main {
-	padding:             43pt 15pt 1pt 15pt;
-	min-height:          calc(100vh - 32pt);
-}
-
-footer {
-	line-height:         30pt;
+	padding:             25pt 15pt 1pt 15pt;
 }
 
 :target::before {
 	display:             block;
 	position:            relative;
-	margin-top:          -53pt;
-	height:              53pt;
+	margin-top:          -37pt;
+	height:              37pt;
 	content:             "";
 }
 
@@ -188,13 +169,77 @@ article > h3:target::after {
 	float:               left;
 }
 
+} /* @media screen and (min-width: 120pt) */
+
+@media screen and (min-width: 150pt) {
+
+header {
+	padding:             0pt 15pt;
+}
+
+} /* @media screen and (min-width: 150pt) */
+
+@media screen and (min-width: 210pt) {
+
+header {
+	padding:             0pt 0pt 0pt 15pt;
+}
+
+header a {
+	padding:             0pt 15pt 0pt 0pt;
+}
+
+} /* @media screen and (min-width: 210pt) */
+
+@media screen and (min-width: 450pt) {
+
+header a {
+	font-size:           14pt;
+}
+
+header a:first-child {
+	font-size:           0pt;
+}
+
+} /* @media screen and (min-width: 450pt) */
+
+@media screen and (min-width: 525pt) {
+
+header a:first-child {
+	font-size:           14pt;
+}
+
+} /* @media screen and (min-width: 525pt) */
+
+@media screen and (min-width: 750pt) {
+
+header a img {
+	margin:              8pt 0pt;
+}
+
+header a:first-child img {
+	margin:              0pt;
+	width:               40pt;
+	height:              40pt;
+}
+
+main {
+	padding:             43pt 15pt 1pt 15pt;
+	min-height:          calc(100vh - 32pt);
+}
+
+footer {
+	line-height:         30pt;
+}
+
+:target::before {
+	margin-top:          -53pt;
+	height:              53pt;
+}
+
 article img {
 	max-height:          calc(100vh - 30pt - 32pt);
 }
-
-} /* @media screen and (min-width: 520pt) */
-
-@media screen and (min-width: 720pt) {
 
 body {
 	background:          #f0f0f0;
@@ -300,9 +345,9 @@ time {
 	margin:              0pt 0pt 0pt -20pt;
 }
 
-} /* @media screen and (min-width: 720pt) */
+} /* @media screen and (min-width: 750pt) */
 
-@media screen and (min-width: 820pt) {
+@media screen and (min-width: 850pt) {
 
 header {
 	padding:             0pt 150pt;
@@ -320,4 +365,4 @@ main > aside {
 	font-size:           90%;
 }
 
-} /* @media screen and (min-width: 820pt) */
+} /* @media screen and (min-width: 850pt) */
