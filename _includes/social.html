@@ -1,5 +1,10 @@
+{% assign site_title_ue = site.title | escape | url_encode %}
+{% assign page_title_ue = page.title | escape | url_encode %}
+{% assign page_url_ue =  page.id | default: page.url | url_encode | prepend: site.url %}
+{% assign summary_ue = page.excerpt | strip_html | strip | escape | url_encode %}
 <h1>Share on …</h1>
 <nav class="social">
 	<a href="https://twitter.com/share">Twitter</a>
-	<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ site.url }}{{ page.id | default: page.url | url_encode }}&amp;title={{ page.title | url_encode }}&amp;summary={{ page.excerpt | strip_html | strip | url_encode }}&amp;source={{ site.title | url_encode }}">LinkedIn</a>
+	<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url={{ page_url_ue }}&amp;title={{ page_title_ue }}&amp;summary={{ summary_ue }}&amp;source={{ site_title_ue }}">LinkedIn</a>
+	<a href="https://www.reddit.com/submit?url={{ page_url_ue }}&amp;title={{ page_title_ue }}">reddit.com</a>
 </nav>
