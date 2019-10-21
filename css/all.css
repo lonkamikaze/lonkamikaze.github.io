@@ -61,7 +61,6 @@ article pre {
 	word-break:          break-all;
 	border-radius:       5pt 0pt 0pt 5pt;
 	border-left:         1pt solid #808080;
-	border-right:        1pt solid #fff;
 }
 
 article > pre + p, article > .highlighter-rouge + p,
@@ -84,7 +83,7 @@ a:hover {
 }
 
 article > h1 a {
-	color:               #000000;
+	color:               inherit;
 }
 
 article table {
@@ -144,10 +143,6 @@ footer a img {
 	float:               right;
 }
 
-.details h2 {
-	border-bottom:       1pt solid #c0c0c0;
-}
-
 /* optional meta { */
 
 time:empty, .update:empty, .author:empty {
@@ -205,10 +200,6 @@ article > .tags {
 
 article > .tags + * {
 	margin-top:          2pt;
-}
-
-.tag {
-	color:               #000;
 }
 
 /* } optional meta */
@@ -314,7 +305,7 @@ section[id^=tag\:] ul {
 }
 
 section[id^=tag\:] a:first-child {
-	color:               #000000;
+	color:               inherit;
 }
 /* } tags page */
 

@@ -30,7 +30,6 @@ dealing with processing or generating C-code.
 	margin: 3pt;
 	background-color: #89abcd;
 	padding: 0pt;
-	color: #000000;
 	white-space: nowrap;
 }
 .nawk:before {content: "nawk: "}
@@ -39,7 +38,6 @@ dealing with processing or generating C-code.
 	margin: 3pt;
 	background-color: #cd89ab;
 	padding: 0pt;
-	color: #000000;
 	white-space: nowrap;
 }
 .gawk:before {content: "gawk: "}
@@ -48,7 +46,6 @@ dealing with processing or generating C-code.
 	margin: 3pt;
 	background-color: #abcd89;
 	padding: 0pt;
-	color: #000000;
 	white-space: nowrap;
 }
 .mawk:before {content: "mawk: "}

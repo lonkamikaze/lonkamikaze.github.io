@@ -24,7 +24,6 @@ are interesting nonetheless.
     margin: 3pt;
     background-color: #89abcd;
     padding: 0pt;
-    color: #000000;
     white-space: nowrap;
 }
 .nawk:before {content: "nawk: "}
@@ -33,7 +32,6 @@ are interesting nonetheless.
     margin: 3pt;
     background-color: #cd89ab;
     padding: 0pt;
-    color: #000000;
     white-space: nowrap;
 }
 .gawk:before {content: "gawk: "}
@@ -42,7 +40,6 @@ are interesting nonetheless.
     margin: 3pt;
     background-color: #abcd89;
     padding: 0pt;
-    color: #000000;
     white-space: nowrap;
 }
 .mawk:before {content: "mawk: "}

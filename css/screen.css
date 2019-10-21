@@ -1,4 +1,65 @@
+:root {
+	--col:               #000000;
+	--body-bg-col:       #f0f0f0;
+	--header-bg-col:     var(--main-bg-col);
+	--header-a-col:      #808080;
+	--header-a-hover-col:#404040;
+	--header-border-col: #606060;
+	--header-img-invert: 0;
+	--aside-a-col:       var(--header-a-hover-col);
+	--aside-a-hover-col: var(--col);
+	--a-col:             #c00000;
+	--main-bg-col:       #ffffff;
+	--pre-bg-col:        var(--body-bg-col);
+	--table-bg-col:      #e8e8e8;
+	--td-bg-col:         var(--main-bg-col);
+	--td-2n-bg-col:      var(--body-bg-col);
+	--time-bg-col:       #d0d0d0;
+	--tag-bg-col:        #50b050;
+	--tag-col:           #ffffff;
+	--tag-hover-col:     #000000;
+	--note-bg-col:       var(--body-bg-col);
+	--note-head-bg-col:  #a0c0e0;
+	--warn-head-bg-col:  #e0c0a0;
+	--hr-col:            #c0c0c0;
+	--img-bg-col:        #ffffff;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+:root {
+	--col:               #ffffff;
+	--body-bg-col:       #202020;
+	--main-bg-col:       #303030;
+	--header-a-col:      #c0c0c0;
+	--header-a-hover-col:#ffffff;
+	--header-img-invert: 1;
+	--tag-bg-col:        #208020;
+	--tag-col:           inherit;
+	--time-bg-col:       #404040;
+	--a-col:             #908088;
+	--note-head-bg-col:  #506070;
+	--warn-head-bg-col:  #705060;
+	--table-bg-col:      #606060;
+	--aside-a-col:       var(--header-a-col);
+	--hr-col:            #707070;
+}
+
+.highlight .kt { color:      #8899cc; } /* Keyword.Type */
+.highlight .nc { color:      #8899cc; } /* Name.Class */
+.highlight .c  { color:      #c03030; } /* Comment */
+.highlight .cm { color:      #c03030; } /* Comment.Multiline */
+.highlight .cp { color:      #c03030; } /* Comment.Preproc */
+.highlight .c1 { color:      #c03030; } /* Comment.Single */
+.highlight .cs { color:      #c03030; } /* Comment.Special */
+.highlight .gd { color:      inherit; background-color: #804040; } /* Generic.Deleted */
+.highlight .gi { color:      inherit; background-color: #408040; } /* Generic.Inserted */
+
+} /* @media screen and (preferred-color-mode: dark) */
+
 body {
+	background:          var(--main-bg-col);
+	color:               var(--col);
 	margin:              0pt;
 	padding:             0pt;
 	overflow-y:          scroll;
@@ -20,18 +81,18 @@ header {
 	font-size:           0;
 	line-height:         1;
 	box-shadow:          0pt 0pt 3pt rgba(0,0,0,.5);
-	border-bottom:       solid 3pt #606060;
+	border-bottom:       solid 3pt var(--header-border-col);
 }
 
 header a, footer a {
 	text-decoration:     none;
-	color:               #808080;
+	color:               var(--header-a-col);
 	white-space:         nowrap;
 	display:             inline-block;
 }
 
 header a:hover, footer a:hover {
-	color:               #404040;
+	color:               var(--header-a-hover-col);
 }
 
 header a img {
@@ -46,6 +107,7 @@ header a img, footer a img {
 	margin:              0pt;
 	padding:             0pt;
 	border:              0pt none;
+	filter:              invert(var(--header-img-invert));
 }
 
 header a:hover img, footer a:hover img {
@@ -54,6 +116,7 @@ header a:hover img, footer a:hover img {
 
 header a:first-child img {
 	opacity:             1;
+	filter:              invert(0);
 }
 
 footer nav {
@@ -66,11 +129,11 @@ footer nav a {
 
 body > footer {
 	padding:             0pt 15pt;
-	border-top:          solid 2pt #606060;
+	border-top:          solid 2pt var(--header-border-col);
 }
 
 article a {
-	color:               #c00000;
+	color:               var(--a-col);
 	text-decoration:     none;
 }
 
@@ -84,50 +147,59 @@ article a[href*="://"]::after {
 article pre {
 	margin:              15pt -15pt 15pt -15pt;
 	padding:             0pt 15pt 0pt 14pt;
+	border-right:        1pt solid var(--main-bg-col);
 }
 
 article pre, .details {
-	background:          #f0f0f0;
+	background:          var(--pre-bg-col);
+}
+
+.details h2 {
+	border-bottom:       1pt solid var(--hr-col);
 }
 
 article table {
-	background:          #e8e8e8;
+	background:          var(--table-bg-col);
 }
 
 article td {
-	background:          #ffffff;
+	background:          var(--td-bg-col);
 }
 
 article table tr:nth-child(2n) td {
-	background:          #f0f0f0;
+	background:          var(--td-2n-bg-col);
+}
+
+article p img {
+	background:          var(--img-bg-col);
 }
 
 time {
 	position:            relative;
 	border-radius:       0pt 2.5pt 0pt 2.5pt;
-	background:          #d0d0d0;
+	background:          var(--time-bg-col);
 	margin:              0pt 0pt 0pt -15pt;
 }
 
 .tag {
-	background:          #50b050;
-	color:               #fff;
+	background:          var(--tag-bg-col);
+	color:               var(--tag-col);
 }
 
 .tag:hover {
-	color:               #000;
+	color:               var(--tag-hover-col);
 }
 
 .note {
-	background:          #f0f0f0;
+	background:          var(--note-bg-col);
 }
 
 .note h4 {
-	background:          #a0c0e0;
+	background:          var(--note-head-bg-col);
 }
 
 .warn h4 {
-	background:          #e0c0a0;
+	background:          var(--warn-head-bg-col);
 }
 
 @media screen and (min-width: 120pt) {
@@ -136,7 +208,7 @@ header {
 	position:            fixed;
 	width:               100%;
 	top:                 0pt;
-	background:          #fff;
+	background:          var(--header-bg-col);
 	z-index:             1;
 	text-align:          right;
 }
@@ -242,7 +314,7 @@ article img {
 }
 
 body {
-	background:          #f0f0f0;
+	background:          var(--body-bg-col);
 }
 
 header {
@@ -250,7 +322,7 @@ header {
 }
 
 main, body > footer {
-	background:          #fff;
+	background:          var(--main-bg-col);
 	margin:              0pt 100pt;
 }
 
@@ -269,11 +341,11 @@ main > aside {
 main > aside a {
 	display:             block;
 	text-decoration:     none;
-	color:               #404040;
+	color:               var(--aside-a-col);
 }
 
 main > aside a:hover {
-	color:               #000000;
+	color:               var(--aside-a-hover-col);
 }
 
 main > aside h1 {
@@ -295,7 +367,7 @@ main > aside h1 {
 }
 
 #left nav > ol, #left nav > ul {
-	background:          #ffffff;
+	background:          var(--main-bg-col);
 	margin:              0pt -5pt;
 	overflow-y:          auto;
 	max-height:          calc(100vh - 53pt - 2.17em);
@@ -316,7 +388,7 @@ main > aside h1 {
 }
 
 #right nav {
-	background:          #ffffff;
+	background:          var(--main-bg-col);
 	border-radius:       0pt 5pt 5pt 0pt;
 	padding:             5pt;
 	margin:              0pt 0pt 0pt -5pt;
