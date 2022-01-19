@@ -3,4 +3,4 @@ test: build
 
 build:
 	@jekyll clean
-	@jekyll build --incremental
+	@jekyll build --future --incremental
