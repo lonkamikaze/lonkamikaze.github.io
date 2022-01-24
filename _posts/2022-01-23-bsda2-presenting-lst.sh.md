@@ -254,7 +254,7 @@ for translating the call.
 Functions that return a string take a variable name argument to write
 the string to. Because it is usually local name within the execution
 context the `RS` variable cannot be written to. The same is sometimes
-true for the variables `IFS`, `IRS` and `ORS` variables.
+true for the variables `IFS`, `IRS` and `ORS`.
 
 If the destination variable name is omitted the value is printed on
 `stdout` instead.
