@@ -10,7 +10,7 @@ tags:
 [bsda]:        http://bsdadminscripts.sf.net
 [ebsd2010]:    http://2010.eurobsdcon.org/presentations-schedule/paper-detail-view/?tx_ptconfmgm_controller_detail_paper[uid]=17&tx_ptconfmgm_controller_detail_paper[pid]=299
 [bsda2]:       https://github.com/lonkamikaze/bsda2
-[bsda:obj]:    https://github.com/lonkamikaze/bsda2/blob/master/bsda_obj.md
+[bsda:obj]:    https://github.com/lonkamikaze/bsda2/blob/master/ref/bsda_obj.md
 [bsda2-0.1.0]: https://github.com/lonkamikaze/bsda2/releases/tag/0.1.0
 [bsda_obj.sh]: https://raw.githubusercontent.com/lonkamikaze/bsda2/master/src/bsda_obj.sh
 Once upon a time I wrote an OOP framework for shell scripts and in
